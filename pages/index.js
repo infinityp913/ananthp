@@ -28,7 +28,7 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
-              Hey - I'm Ananth. I'm the Co-founder of Matherium where we're
+              Hey - I'm Ananth. I'm the co-founder of Matherium where we're
               building AI avatars to help businesses. I love to build things by
               hacking other things together. <br></br><br></br>
               I like to write sometimes and I
