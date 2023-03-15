@@ -27,7 +27,7 @@ export default function Home() {
             <h1 className="font-semibold text-xl font-serif text-white">
               Ananth Preetham
             </h1>
-            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
+            <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
               Hey - I'm Ananth. I'm the co-founder of Matherium where we're
               building AI avatars to help businesses. I love to build things by
               hacking other things together. <br></br><br></br>
