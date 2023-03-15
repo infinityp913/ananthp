@@ -30,7 +30,7 @@ export default function Home() {
             <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
               Hey - I'm Ananth. I'm the co-founder of Matherium where we're
               building AI avatars to help businesses. I love to hack things together
-              build better things. <br></br><br></br>
+              to build better things. <br></br><br></br>
               I like to write sometimes and I
               love good movies and TV shows. Watching Mythic Quest on Apple TV+ right now.
             </p>
