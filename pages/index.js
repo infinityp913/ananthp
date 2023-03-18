@@ -28,11 +28,14 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
-              Hey - I'm Ananth. I'm the co-founder of Matherium where we're
+              Hey - I'm Ananth. I'm the co-founder of <a href="https://matherium.com">Matherium</a> where we're
               building AI avatars to help businesses. I love to hack things together
               to build better things. <br></br><br></br>
               I like to write sometimes and I
               love good movies and TV shows. Watching Mythic Quest on Apple TV+ right now.
+              <br></br><br></br>
+              Why is it important to persevere when things get hard? <br></br>Because of <a href="https://www.youtube.com/watch?v=k6C8SX0mWP0">The Tales that Mattered</a>.
+
             </p>
 
             <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
