@@ -68,7 +68,9 @@ export default function Home() {
                   <p className="h-7">➚connect with me on linkedin</p>
                 </a>
               </li>
-              <li>
+              
+            </ul>
+            <li>
                 <a
                   className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
                   rel="noopener noreferrer"
@@ -80,7 +82,6 @@ export default function Home() {
                   </p>
                 </a>
               </li>
-            </ul>
           </div>
         </div>
       </section>
