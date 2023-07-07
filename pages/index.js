@@ -32,7 +32,7 @@ export default function Home() {
               building AI avatars to help businesses. I love to hack things together
               to build better things. <br></br><br></br>
               I like to write sometimes and I
-              love good movies and TV shows. Watching Mythic Quest on Apple TV+ right now.
+              love good movies and TV shows. Watching Platonic on Apple TV+ right now.
               <br></br><br></br>
               Why is it important to persevere when things get hard? <br></br>Because of <a href="https://www.youtube.com/watch?v=k6C8SX0mWP0">The Tales that Mattered</a>.
 
@@ -52,7 +52,27 @@ export default function Home() {
                   <p className="h-7">➚follow me on twitter</p>
                 </a>
               </li>
+              <li>
+                <a
+                  className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://linkedin.com/in/ananth-preetham"
+                >
+                  <p className="h-7">➚connect with me on linkedin</p>
+                </a>
+              </li>
             </ul>
+            <li>
+                <a
+                  className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.umass.edu/gateway/article/2022-senior-series-ananth-and-sid-preetham"
+                >
+                  <p className="h-7">➚a short artice about me and my cofounder and twin, Sid</p>
+                </a>
+              </li>
           </div>
         </div>
       </section>
