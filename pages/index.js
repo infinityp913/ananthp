@@ -33,7 +33,7 @@ export default function Home() {
               AI avatars to help businesses. I love to hack things together to
               build better things. <br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows. Watching Platonic on Apple TV+ right now.
+              shows. Watching Mr and Mrs Smith on Prime Video right now. Gotta watch Dune 2.
               <br></br>
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
