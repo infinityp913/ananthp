@@ -30,10 +30,11 @@ export default function Home() {
             <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
               Hey - I'm Ananth. I'm the co-founder of{" "}
               <a href="https://matherium.com">Matherium</a> where we're building
-              AI call agents to help businesses. I love to hack things together to
-              build better things. <br></br>
+              AI call agents to help businesses. I love to hack things together
+              to build better things. <br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows. Watching Mr and Mrs Smith on Prime Video right now. Dune 2's up next.
+              shows. Watching Mr and Mrs Smith on Prime Video right now. Dune
+              2's up next.
               <br></br>
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
@@ -41,10 +42,31 @@ export default function Home() {
               <a href="https://www.youtube.com/watch?v=k6C8SX0mWP0">
                 The Tales that Mattered
               </a>
-              .
+              .<br></br>
               <br></br>
-              <br></br>
-              Note to myself: <br></br>
+              <details>
+                <summary>Note to myself:</summary>
+                <ol>
+                  <li>
+                    <a href="https://youtu.be/xaTmv67WpRM?t=599">
+                      There's always a gap between a stimulus and your response.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X">
+                      Your last human freedom is to choose your attitude in any
+                      given set of circumstances.
+                    </a>
+                  </li>
+                  <li>Don't lose the power to see the good in people.</li>
+                  <li>
+                    You just can't beat the person who never gives up. - Babe
+                    Ruth
+                  </li>
+                </ol>
+              </details>
+              {/* Note to myself: <br></br>
+              
               <ol>
                 <li>
                   <a href="https://youtu.be/xaTmv67WpRM?t=599">
@@ -62,7 +84,7 @@ export default function Home() {
                 <li>
                   You just can't beat the person who never gives up. - Babe Ruth
                 </li>
-              </ol>
+              </ol> */}
             </p>
 
             <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
@@ -99,7 +121,8 @@ export default function Home() {
                   href="https://www.umass.edu/gateway/article/2022-senior-series-ananth-and-sid-preetham"
                 >
                   <p className="h-7">
-                    ➚a university of massachusetts artice about me and my cofounder/twin, Sid
+                    ➚a university of massachusetts artice about me and my
+                    cofounder/twin, Sid
                   </p>
                 </a>
               </li>
