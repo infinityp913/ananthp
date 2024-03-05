@@ -42,6 +42,27 @@ export default function Home() {
                 The Tales that Mattered
               </a>
               .
+              <br></br>
+              <br></br>
+              Note to myself: <br></br>
+              <ol>
+                <li>
+                  <a href="https://youtu.be/xaTmv67WpRM?t=599">
+                    There's always a gap between a stimulus and your response.
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X">
+                    Your last human freedom is to choose your attitude in any given set of circumstances.
+                  </a>
+                </li>
+                <li>
+                  Don't lose the power to see the good in people.
+                </li>
+                <li>
+                  You just can't beat the person who never gives up. - Babe Ruth
+                </li>
+              </ol>
             </p>
 
             <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
