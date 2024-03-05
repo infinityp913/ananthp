@@ -78,7 +78,7 @@ export default function Home() {
                   href="https://www.umass.edu/gateway/article/2022-senior-series-ananth-and-sid-preetham"
                 >
                   <p className="h-7">
-                    ➚a short artice about me and my cofounder/twin, Sid
+                    ➚a university of massachusetts artice about me and my cofounder/twin, Sid
                   </p>
                 </a>
               </li>
