@@ -28,7 +28,7 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
-              Hey - I'm Ananth. I'm the co-founder of{" "}
+              Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
               <a href="https://matherium.com">Matherium</a> where we're building
               AI call agents to help businesses. I love to hack things together
               to build better things. <br></br>
