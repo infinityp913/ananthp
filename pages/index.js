@@ -33,7 +33,7 @@ export default function Home() {
               AI call agents to help businesses. I love to hack things together
               to build better things. <br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows. Watching Shogun right now. 
+              shows. Watching Silo right now. 
               <br></br>
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
