@@ -18,16 +18,16 @@ export default function Home() {
               <Image
                 alt="Ananth Preetham"
                 // className="rounded-full grayscale"
-                src="/prof-pic.png"
-                width={150}
-                height={150}
+                src="/memoji.png"
+                width={100}
+                height={100}
                 priority
               />
             </div>
             <h1 className="font-semibold text-xl font-serif text-white">
               Ananth Preetham
             </h1>
-            <p className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
+            <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
               Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
               <a href="https://matherium.com">Matherium</a> where we're building
               AI call agents to help businesses. I love to hack things together
@@ -64,11 +64,8 @@ export default function Home() {
                   </li>
                 </ol>
               </details>
-            </p>
+            </div>
 
-            <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
-              {/* {bio()} */}
-            </p>
             <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
               <li>
                 <a
