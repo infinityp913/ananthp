@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="text-xs">
-        <div className="flex h-screen">
+      <section className="text-xs h-screen flex-col">
+        <div className="flex">
           <div className="m-auto mt-[8rem]">
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
@@ -33,8 +33,15 @@ export default function Home() {
               AI call agents to help businesses. I love to hack things together
               to build better things. <br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows. Watching Silo right now. 
-              <br></br>
+              shows. Here's my{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://ananthp.notion.site/Movie-Tracker-6857fb6ce4ea438592ee5d56ccf14260?pvs=4"
+              >
+                Movie/TV Tracker
+              </a>
+              .<br></br>
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
               Because of{" "}
@@ -47,13 +54,15 @@ export default function Home() {
                 <summary>Notes to myself:</summary>
                 <ol>
                   <li>
+                    1.{" "}
                     <a href="https://youtu.be/xaTmv67WpRM?t=599">
-                      1. There's always a gap between a stimulus and your response.
+                      There's always a gap between a stimulus and your response.
                     </a>
                   </li>
                   <li>
+                    2.{" "}
                     <a href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X">
-                      2. Your last human freedom is to choose your attitude in any
+                      Your last human freedom is to choose your attitude in any
                       given set of circumstances.
                     </a>
                   </li>
@@ -105,6 +114,22 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        <footer class="py-24 px-4">
+          <div class="max-w-xl mx-auto">
+            <blockquote class="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
+              <p class="mb-2">
+                You can't connect the dots looking forward; you can only connect
+                them looking backwards. So you have to trust that the dots will
+                somehow connect in your future.
+              </p>
+              <p>
+                You have to trust in something - your gut, destiny, life, karma,
+                whatever.
+              </p>
+            </blockquote>
+            <cite class="block mt-6 text-xs">- Steve Jobs</cite>
+          </div>
+        </footer>
       </section>
     </>
   );
