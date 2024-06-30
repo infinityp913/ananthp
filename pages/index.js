@@ -20,7 +20,7 @@ export default function Home() {
       <section className="h-screen flex-col">
         <div className="flex">
           <div className="m-auto mt-[5rem]">
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
                 alt="Ananth Preetham"
@@ -36,7 +36,7 @@ export default function Home() {
             >
               Ananth Preetham
             </h1>
-            <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
+            <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-200">
               Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
               <a href="https://matherium.com">Matherium</a> where we're building
               AI call agents to help businesses. I love to hack things together
@@ -123,10 +123,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <footer class="py-24 px-4">
-          <div class="max-w-xl mx-auto">
+        <footer className="py-24 px-4 text-neutral-600">
+          <div className="max-w-xl mx-auto">
             <blockquote className="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
-              <p class="mb-2">
+              <p className="mb-2">
                 You can't connect the dots looking forward; you can only connect
                 them looking backwards. So you have to trust that the dots will
                 somehow connect in your future.
@@ -136,7 +136,7 @@ export default function Home() {
                 whatever.
               </p>
             </blockquote>
-            <cite class="block mt-6 text-xs">- Steve Jobs</cite>
+            <cite className="block mt-6 text-xs">- Steve Jobs</cite>
             <div className="text-xs mt-2">
               Inspired by{" "}
               <a
