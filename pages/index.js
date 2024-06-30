@@ -20,7 +20,7 @@ export default function Home() {
       <section className="h-screen flex-col">
         <div className="flex">
           <div className="m-auto mt-[5rem]">
-            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
                 alt="Ananth Preetham"
@@ -38,9 +38,15 @@ export default function Home() {
             </h1>
             <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-200">
               Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
-              <a href="https://matherium.com">Matherium</a> where we're building
-              AI call agents to help businesses. I love to hack things together
-              to build better things. <br></br>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://matherium.com"
+              >
+                Matherium
+              </a>{" "}
+              where we're building AI call agents to help businesses. I love to
+              hack things together to build better things. <br></br>
               <br></br>I like to write sometimes and I love good movies and TV
               shows. Here's my{" "}
               <a
@@ -54,7 +60,11 @@ export default function Home() {
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
               Because of{" "}
-              <a href="https://www.youtube.com/watch?v=k6C8SX0mWP0">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/watch?v=k6C8SX0mWP0"
+              >
                 The Tales that Mattered
               </a>
               .<br></br>
@@ -64,13 +74,21 @@ export default function Home() {
                 <ol>
                   <li>
                     1.{" "}
-                    <a href="https://youtu.be/xaTmv67WpRM?t=599">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://youtu.be/xaTmv67WpRM?t=599"
+                    >
                       There's always a gap between a stimulus and your response.
                     </a>
                   </li>
                   <li>
                     2.{" "}
-                    <a href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X"
+                    >
                       Your last human freedom is to choose your attitude in any
                       given set of circumstances.
                     </a>
