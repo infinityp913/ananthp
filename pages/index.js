@@ -1,6 +1,13 @@
 import Head from "next/head";
 import { Navbar } from "@/components/Navbar";
+import { Libre_Baskerville } from "next/font/google";
 import Image from "next/image";
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
 
 export default function Home() {
   return (
@@ -10,10 +17,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <section className="text-xs h-screen flex-col">
+      <section className="h-screen flex-col">
         <div className="flex">
-          <div className="m-auto mt-[8rem]">
+          <div className="m-auto mt-[5rem]">
+            <Navbar></Navbar>
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
                 alt="Ananth Preetham"
@@ -24,7 +31,9 @@ export default function Home() {
                 priority
               />
             </div>
-            <h1 className="font-semibold text-xl font-serif text-white">
+            <h1
+              className={`font-semibold text-2xl font-serif text-white ${libreBaskerville}`}
+            >
               Ananth Preetham
             </h1>
             <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-800 dark:text-neutral-200">
@@ -116,7 +125,7 @@ export default function Home() {
         </div>
         <footer class="py-24 px-4">
           <div class="max-w-xl mx-auto">
-            <blockquote class="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
+            <blockquote className="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
               <p class="mb-2">
                 You can't connect the dots looking forward; you can only connect
                 them looking backwards. So you have to trust that the dots will
@@ -128,6 +137,17 @@ export default function Home() {
               </p>
             </blockquote>
             <cite class="block mt-6 text-xs">- Steve Jobs</cite>
+            <div className="text-xs mt-2">
+              Inspired by{" "}
+              <a
+                href="https://leerob.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-neutral"
+              >
+                Lee Robinson's website
+              </a>
+            </div>
           </div>
         </footer>
       </section>
