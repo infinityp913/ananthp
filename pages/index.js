@@ -24,7 +24,6 @@ export default function Home() {
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
                 alt="Ananth Preetham"
-                // className="rounded-full grayscale"
                 src="/memoji.png"
                 width={100}
                 height={100}
@@ -36,7 +35,7 @@ export default function Home() {
             >
               Ananth Preetham
             </h1>
-            <div className="my-5 sm:max-w-[460px] max-w-[300px] text-neutral-200">
+            <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
               Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
               <a
                 target="_blank"
@@ -71,32 +70,38 @@ export default function Home() {
               <br></br>
               <details>
                 <summary>Notes to myself:</summary>
-                <ol>
+                <ol className="list-decimal ml-12">
                   <li>
-                    1.{" "}
+                    There's always{" "}
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
                       href="https://youtu.be/xaTmv67WpRM?t=599"
                     >
-                      There's always a gap between a stimulus and your response.
+                      a gap {" "}
                     </a>
+                    between a stimulus and your response.
                   </li>
                   <li>
-                    2.{" "}
+                    Your{" "}
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
                       href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X"
                     >
-                      Your last human freedom is to choose your attitude in any
-                      given set of circumstances.
+                      last human freedom {" "}
                     </a>
+                    is to choose your attitude in any given set of
+                    circumstances.
                   </li>
-                  <li>3. Don't lose the power to see the good in people.</li>
+                  <li>Don't lose the power to see the good in people.</li>
                   <li>
-                    4. You just can't beat the person who never gives up. - Babe
+                    You just can't beat the person who never gives up. - Babe
                     Ruth
+                  </li>
+                  <li>
+                    The secret is{" "}
+                    <span className="underline font-bold">Grit</span>.
                   </li>
                 </ol>
               </details>

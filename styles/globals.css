@@ -8,7 +8,7 @@ html {
   background-color: #0d1117;
 }
 section{
-  @apply text-sm
+  @apply text-base
 }
 a:not(footer a){
   color:gray
