@@ -18,7 +18,7 @@ export default function WorkPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="w-screen m-auto pb-16 flex items-center justify-center md:flex-row max-w-2xl text-neutral-200">
+      <section className="w-screen m-auto pb-16 px-20 flex items-center justify-center md:flex-row sm:max-w-[460px] max-w-2xl text-neutral-200">
         <div className="flex">
           <div className="mt-[5rem]">
             <Navbar></Navbar>
