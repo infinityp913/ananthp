@@ -69,7 +69,7 @@ export default function Home() {
               .<br></br>
               <br></br>
               <details>
-                <summary>Notes to myself:</summary>
+                <summary className="cursor-pointer" >Notes to myself:</summary>
                 <ol className="list-decimal ml-12">
                   <li>
                     There's always{" "}
