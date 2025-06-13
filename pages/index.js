@@ -40,22 +40,40 @@ export default function Home() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://matherium.com"
+                href="https://matherium.org"
               >
                 Matherium
               </a>{" "}
-              where we're building AI call agents to help businesses. I love to
-              hack things together to build better things. <br></br>
+              where we're helping international students going to the US
+              practice for their F1 Visa interviews. <br></br>
+              <br></br> I'm also an ML Engineer at Nike, where I'm using
+              computer vision to make it easier to find marketing assets and
+              save time and money.<br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows. Here's my{" "}
+              shows.{" "}
+              <span className="linethrough">
+                {" "}
+                Here's my{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://ananthp.notion.site/Movie-Tracker-6857fb6ce4ea438592ee5d56ccf14260?pvs=4"
+                >
+                  Movie/TV Tracker
+                </a>
+              </span>{" "}
+              The amazing app that{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://ananthp.notion.site/Movie-Tracker-6857fb6ce4ea438592ee5d56ccf14260?pvs=4"
+                href="https://letterboxd.com/infinityp913/"
+                className="underline"
               >
-                Movie/TV Tracker
-              </a>
-              .<br></br>
+                letterboxd
+              </a>{" "}
+              is has long replaced my hard-to-maintain Notion page.
+              <br></br>I love to hack things together to build better things.{" "}
+              <br></br>
               <br></br>
               Why is it important to persevere when things get hard? <br></br>
               Because of{" "}
@@ -69,7 +87,7 @@ export default function Home() {
               .<br></br>
               <br></br>
               <details>
-                <summary className="cursor-pointer" >Notes to myself:</summary>
+                <summary className="cursor-pointer">Notes to myself:</summary>
                 <ol className="list-decimal ml-12">
                   <li>
                     There's always{" "}
@@ -78,7 +96,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       href="https://youtu.be/xaTmv67WpRM?t=599"
                     >
-                      a gap {" "}
+                      a gap{" "}
                     </a>
                     between a stimulus and your response.
                   </li>
@@ -89,7 +107,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X"
                     >
-                      last human freedom {" "}
+                      last human freedom{" "}
                     </a>
                     is to choose your attitude in any given set of
                     circumstances.
