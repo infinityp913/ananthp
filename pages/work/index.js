@@ -84,6 +84,29 @@ export default function WorkPage() {
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              Nike
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              ML Engineer, Oct 2024 — Present
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                At{" "}
+                Nike, I am currently working on helping Marketing easily discover image, video and other assets using Generative AI and thereby save time and money.
+              </li>
+              <li>
+                Helped deploy an end-to-end Generative AI pipeline involving object detection, segmentation and vector search using
+                Databricks and AWS services such as SageMaker.
+              </li>
+              <li>
+                Leveraged Claude 3.5 Sonnet to generate descriptions and metadata tags for Nike products in marketing assets.
+              </li>
+              <li>
+                Worked in a collaborative Agile environment, focusing on high quality code and code reviews.
+              </li>
+            </ul>
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Pompeii Artistic Landscape Project
             </h2>
             <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
