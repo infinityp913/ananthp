@@ -92,23 +92,16 @@ export default function WorkPage() {
             <ul className="leading-relaxed list-disc">
               <li>
                 At{" "}
-                Nike, I am currently working on helping Marketing easily discover image, video and other assets using Generative AI and thereby save time and money.
-              </li>
-              <li>
-                Helped deploy an end-to-end Generative AI pipeline involving object detection, segmentation and vector search using
-                Databricks and AWS services such as SageMaker.
-              </li>
-              <li>
-                Leveraged Claude 3.5 Sonnet to generate descriptions and metadata tags for Nike products in marketing assets.
-              </li>
-              <li>
-                Built a GraphRAG-powered AI assistant trained on Nike's macroeconomic and competitive landscape using government and media documents, leveraging LlamaIndex, AWS' GraphRAG-toolkit, and LibreChat.
+                Nike, I am currently building a GraphRAG-powered AI assistant trained on Nike's macroeconomic and competitive landscape using government and media documents, leveraging LlamaIndex, AWS' GraphRAG-toolkit, and LibreChat.
               </li>
               <li>
                 Enhanced AI assistant accountability by implementing source attribution and statement tracking in the UI, ensuring transparency and traceability of information.
               </li>
               <li>
-                Worked in a collaborative Agile environment, focusing on high quality code and code reviews.
+                Deployed Generative AI solutions to help discover Nike products in media assets using object detection, segmentation and vector search via Databricks and AWS services such as SageMaker.
+              </li>
+              <li>
+                Leveraged Claude 3.5 Sonnet to generate descriptions and metadata tags for Nike products in marketing assets.
               </li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
