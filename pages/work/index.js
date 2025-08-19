@@ -102,6 +102,12 @@ export default function WorkPage() {
                 Leveraged Claude 3.5 Sonnet to generate descriptions and metadata tags for Nike products in marketing assets.
               </li>
               <li>
+                Built a GraphRAG-powered AI assistant trained on Nike's macroeconomic and competitive landscape using government and media documents, leveraging LlamaIndex, AWS' GraphRAG-toolkit, and LibreChat.
+              </li>
+              <li>
+                Enhanced AI assistant accountability by implementing source attribution and statement tracking in the UI, ensuring transparency and traceability of information.
+              </li>
+              <li>
                 Worked in a collaborative Agile environment, focusing on high quality code and code reviews.
               </li>
             </ul>
