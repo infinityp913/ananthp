@@ -36,33 +36,29 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
-              Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder of{" "}
+              Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder @{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://trychalkboard.com"
+              >
+                Chalkboard
+              </a>
+              . We're building the AI OS for enterprise training.
+              <br></br>
+              <br></br>I built voice agents for F1 visa interviews, customer
+              service and more @{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://matherium.org"
               >
                 Matherium
-              </a>{" "}
-              where we're helping international students going to the US
-              practice for their F1 Visa interviews. <br></br>
-              <br></br> I'm also an ML Engineer at Nike, where I'm using
-              computer vision to make it easier to find marketing assets and
-              save time and money.<br></br>
+              </a>
+              . <br></br>
+              <br></br> I do ML and software at Nike.<br></br>
               <br></br>I like to write sometimes and I love good movies and TV
-              shows.{" "}
-              <span className="linethrough">
-                {" "}
-                Here's my{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://ananthp.notion.site/Movie-Tracker-6857fb6ce4ea438592ee5d56ccf14260?pvs=4"
-                >
-                  Movie/TV Tracker
-                </a>
-              </span>{" "}
-              The amazing app that{" "}
+              shows. Check out my {" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,7 +67,7 @@ export default function Home() {
               >
                 letterboxd
               </a>{" "}
-              is has long replaced my hard-to-maintain Notion page.
+              .
               <br></br>I love to hack things together to build better things.{" "}
               <br></br>
               <br></br>
