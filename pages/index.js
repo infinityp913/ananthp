@@ -121,43 +121,62 @@ export default function Home() {
               </details>
             </div>
 
-            <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
-              <li>
-                <a
-                  className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://twitter.com/ananthp_"
+            <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://twitter.com/ananthp_"
+                aria-label="X"
+                title="X"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
                 >
-                  <p className="h-7">➚follow me on twitter</p>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://linkedin.com/in/ananth-preetham"
+                  <path d="M18.901 2H22l-7.348 8.394L23.5 22h-6.78l-5.3-6.905L5.6 22H2.5l7.86-8.98L.5 2h6.95l4.8 6.31L18.901 2zM16.8 19.2h1.9L7.2 4.7H5.1l11.7 14.5z" />
+                </svg>
+              </a>
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://linkedin.com/in/ananth-preetham"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
                 >
-                  <p className="h-7">➚connect with me on linkedin</p>
-                </a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a
-                  className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://www.umass.edu/gateway/article/2022-senior-series-ananth-and-sid-preetham"
+                  <path d="M4.98 3.5a2.5 2.5 0 1 1-.01 5 2.5 2.5 0 0 1 .01-5zM3 8.75h4v12.25H3V8.75zm7.5 0H14v1.67h.05c.49-.93 1.69-1.92 3.47-1.92 3.71 0 4.39 2.44 4.39 5.62V21h-4v-5.4c0-1.29-.03-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21h-4V8.75z" />
+                </svg>
+              </a>
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/infinityp913"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
                 >
-                  <p className="h-7">
-                    ➚a university of massachusetts artice about me and my
-                    cofounder/twin, Sid
-                  </p>
-                </a>
-              </li>
-            </ul>
+                  <path d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.79-.25.79-.56v-2.01c-3.22.7-3.9-1.38-3.9-1.38-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.72 1.27 3.39.97.1-.75.41-1.27.75-1.56-2.57-.29-5.27-1.28-5.27-5.72 0-1.27.46-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.18 0 0 .98-.31 3.2 1.19a11.07 11.07 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.66.23 2.88.11 3.18.75.81 1.2 1.84 1.2 3.11 0 4.45-2.7 5.42-5.28 5.71.42.36.8 1.08.8 2.18v3.23c0 .31.2.66.8.56A11.5 11.5 0 0 0 12 .5z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <footer className="py-24 px-4 text-neutral-600">
