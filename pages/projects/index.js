@@ -216,19 +216,18 @@ export default function ProjectsPage() {
                             className="ml-4 sm:ml-6 flex-1 min-w-0 project-card"
                           >
                             <div className="mb-1">
-                              {project.link ? (
+                              <span className="font-medium text-neutral-200">
+                                {project.title}
+                              </span>
+                              {project.link && (
                                 <a
                                   href={project.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="font-medium text-neutral-200 hover:text-white transition-colors"
+                                  className="block text-xs text-neutral-500 hover:text-neutral-300 transition-colors mt-0.5"
                                 >
-                                  {project.title}
+                                  [link to project]
                                 </a>
-                              ) : (
-                                <span className="font-medium text-neutral-200">
-                                  {project.title}
-                                </span>
                               )}
                             </div>
                             <p className="text-sm text-neutral-400 leading-relaxed mt-2">

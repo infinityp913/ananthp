@@ -17,9 +17,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="h-screen flex-col px-20">
-        <div className="flex">
-          <div className="m-auto mt-[5rem]">
+      <section className="w-screen m-auto pb-16 px-6 sm:px-20 lg:px-0 max-w-2xl text-neutral-200">
+        <div className="flex w-full">
+          <div className="mt-[5rem]">
             <Navbar></Navbar>
             <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
               <Image
@@ -31,56 +31,79 @@ export default function Home() {
               />
             </div>
             <h1
-              className={`font-semibold text-2xl font-serif text-white ${libreBaskerville}`}
+              className={`font-semibold text-2xl text-white ${libreBaskerville.className}`}
             >
               Ananth Preetham
             </h1>
+            <p className="text-neutral-400 text-sm mt-2">
+              Entrepreneur + ML Engineer + Software Engineer + AI Orchestrator
+            </p>
+            <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://linkedin.com/in/ananth-preetham"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path d="M4.98 3.5a2.5 2.5 0 1 1-.01 5 2.5 2.5 0 0 1 .01-5zM3 8.75h4v12.25H3V8.75zm7.5 0H14v1.67h.05c.49-.93 1.69-1.92 3.47-1.92 3.71 0 4.39 2.44 4.39 5.62V21h-4v-5.4c0-1.29-.03-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21h-4V8.75z" />
+                </svg>
+              </a>
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/infinityp913"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.79-.25.79-.56v-2.01c-3.22.7-3.9-1.38-3.9-1.38-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.72 1.27 3.39.97.1-.75.41-1.27.75-1.56-2.57-.29-5.27-1.28-5.27-5.72 0-1.27.46-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.18 0 0 .98-.31 3.2 1.19a11.07 11.07 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.66.23 2.88.11 3.18.75.81 1.2 1.84 1.2 3.11 0 4.45-2.7 5.42-5.28 5.71.42.36.8 1.08.8 2.18v3.23c0 .31.2.66.8.56A11.5 11.5 0 0 0 12 .5z" />
+                </svg>
+              </a>
+              <a
+                className="hover:text-neutral-200 transition-all"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://twitter.com/ananthp_"
+                aria-label="X"
+                title="X"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path d="M18.901 2H22l-7.348 8.394L23.5 22h-6.78l-5.3-6.905L5.6 22H2.5l7.86-8.98L.5 2h6.95l4.8 6.31L18.901 2zM16.8 19.2h1.9L7.2 4.7H5.1l11.7 14.5z" />
+                </svg>
+              </a>
+            </div>
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
-              Hey - I'm Ananth (Uh-Nun-t). I'm the co-founder @{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://trychalkboard.com"
-              >
-                Chalkboard
-              </a>
-              . We're building the AI OS for enterprise training.
               <br></br>
-              <br></br>I built voice agents for F1 visa interviews, customer
-              service and more @{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://matherium.org"
-              >
-                Matherium
-              </a>
-              . <br></br>
-              <br></br> I do ML and software at Nike.<br></br>
-              <br></br>I like to write sometimes and I love good movies and TV
-              shows. Check out my {" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://letterboxd.com/infinityp913/"
-                className="underline"
-              >
-                letterboxd
-              </a>{" "}
-              .
-              <br></br>I love to hack things together to build better things.{" "}
-              <br></br>
-              <br></br>
-              Why is it important to persevere when things get hard? <br></br>
-              Because of{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.youtube.com/watch?v=k6C8SX0mWP0"
               >
-                The Tales that Mattered
+                Persevering when things get hard.
               </a>
-              .<br></br>
+              <br></br>
               <br></br>
               <details>
                 <summary className="cursor-pointer">Notes to myself:</summary>
@@ -120,63 +143,6 @@ export default function Home() {
                 </ol>
               </details>
             </div>
-
-            <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
-              <a
-                className="hover:text-neutral-200 transition-all"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://twitter.com/ananthp_"
-                aria-label="X"
-                title="X"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path d="M18.901 2H22l-7.348 8.394L23.5 22h-6.78l-5.3-6.905L5.6 22H2.5l7.86-8.98L.5 2h6.95l4.8 6.31L18.901 2zM16.8 19.2h1.9L7.2 4.7H5.1l11.7 14.5z" />
-                </svg>
-              </a>
-              <a
-                className="hover:text-neutral-200 transition-all"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://linkedin.com/in/ananth-preetham"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path d="M4.98 3.5a2.5 2.5 0 1 1-.01 5 2.5 2.5 0 0 1 .01-5zM3 8.75h4v12.25H3V8.75zm7.5 0H14v1.67h.05c.49-.93 1.69-1.92 3.47-1.92 3.71 0 4.39 2.44 4.39 5.62V21h-4v-5.4c0-1.29-.03-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21h-4V8.75z" />
-                </svg>
-              </a>
-              <a
-                className="hover:text-neutral-200 transition-all"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/infinityp913"
-                aria-label="GitHub"
-                title="GitHub"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.79-.25.79-.56v-2.01c-3.22.7-3.9-1.38-3.9-1.38-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.72 1.27 3.39.97.1-.75.41-1.27.75-1.56-2.57-.29-5.27-1.28-5.27-5.72 0-1.27.46-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.18 0 0 .98-.31 3.2 1.19a11.07 11.07 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.66.23 2.88.11 3.18.75.81 1.2 1.84 1.2 3.11 0 4.45-2.7 5.42-5.28 5.71.42.36.8 1.08.8 2.18v3.23c0 .31.2.66.8.56A11.5 11.5 0 0 0 12 .5z" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
         <footer className="py-24 px-4 text-neutral-600">
@@ -201,7 +167,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="underline text-neutral"
               >
-                Lee Robinson's website
+                Lee Robinson's page
               </a>
             </div>
           </div>
