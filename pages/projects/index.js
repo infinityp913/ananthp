@@ -13,12 +13,74 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "CloudCompare Automation for Archaeological Volumetrics",
+    year: 2025,
+    description:
+      "A script to automate volumetric generation for excavated stratigraphic units (SUs) using CloudCompare processes, producing 3D objects viewable from all angles for post-excavation analysis and record keeping. Part of the Tharros Archaeological Research Project (TARP), directed by Dr. Eric Poehler and Dr. Steven Ellis at the University of Cincinnati. Output is archived on A.I.R., a visual archival platform for archaeological projects built by Paola Derudas at Lund University.",
+    tech: ["Python", "CloudCompare", "3D Volumetrics", "Archaeology"],
+    link: "https://github.com/garygao333/cloudcomparescript",
+  },
+  {
+    title: "RTC Go Server",
+    year: 2023,
+    description:
+      "A concurrent Go server that brokers real-time WebRTC connections between browser clients and on-demand server clients, routing audio streams through Speech-to-Text. The backbone infrastructure for Ria Voice.",
+    tech: ["Go", "WebRTC", "Speech-to-Text", "MediaStreams"],
+    link: "https://github.com/infinityp913/rtc-go-server",
+  },
+  {
+    title: "Ria Voice",
+    year: 2023,
+    description:
+      "Voice agents for customer service — hacked together Vosk for ASR, a custom TTS pipeline (Tacotron / WaveGlow / HiFi-GAN) and Whisper for STT, all orchestrated by a concurrent Go server across multiple MediaStreams. Integrated GPT and tuned Whisper.cpp, cutting response time by 25%.",
+    tech: ["Go", "WebRTC", "Whisper", "Next.js", "React", "Flask", "Nginx", "TTS", "LLM"],
+    link: "https://github.com/a13m-matherium/ria-voice-website",
+  },
+  {
+    title: "AI Avatars for Customer Service",
+    year: 2022,
+    description:
+      "Interactive AI avatars whose faces move in sync with a voice agent's audio — think voice agent + a deepfake video model driven by speech. Designed and trained a custom TTS model, co-designed the lip-sync GAN. Pivoted to voice-only agents based on user feedback.",
+    tech: ["GAN", "TTS", "Whisper", "Python", "Deepfake"],
+  },
+  {
+    title: "Pompeii Artistic Landscape Project",
+    year: 2022,
+    description:
+      "A map-based exploration of the artistic and geographical history of Pompeii. Built in collaboration with Dr. Eric Poehler (UMass Amherst) and Sebastian Heath (NYU) to visualize PALP's archaeological data.",
+    tech: ["Gatsby", "React", "Node.js", "NLP"],
+    link: "https://palp-art.netlify.app/start/",
+  },
+  {
+    title: "GPU Server",
+    year: 2021,
+    description:
+      "A custom liquid-cooled compute server built for ML workflows: RTX 3070 (8GB vRAM), 128GB RAM, Ryzen 5 CPU. Hand-built the cooling loop with PEG hard tubes bent over candle heat — a $4K build during senior year finals that paid back in cloud compute savings.",
+    tech: ["Custom Hardware", "NVIDIA RTX 3070", "Liquid Cooling", "CUDA"],
+  },
+  {
     title: "DonateIt",
     year: 2020,
     description:
       "A charitable donation platform that contextualizes contributions using cost-of-living data across countries, helping donors understand the real-world impact of their money.",
     tech: ["HTML5", "CSS", "JavaScript", "jQuery", "SCSS"],
     link: "https://devpost.com/software/donateit-4il5tg",
+  },
+  {
+    title: "Project Iris",
+    year: 2020,
+    description:
+      "An application that identifies objects in the real world through your camera and translates their names into your language — bridging the physical and linguistic gap for language learners.",
+    tech: ["Python", "Computer Vision", "Object Detection", "Translation"],
+    link: "https://github.com/infinityp913/Project-Iris",
+  },
+  {
+    title: "Readable",
+    year: 2020,
+    description:
+      "A web app that uses your camera to capture hard-to-read text and reads it back to you aloud. Designed to be simple — ideal for the elderly, visually impaired, and those with reading difficulties.",
+    tech: ["JavaScript", "OCR", "Text-to-Speech", "Camera API"],
+    link: "https://github.com/infinityp913/Readable",
   },
   {
     title: "TampAlert!",
@@ -35,6 +97,13 @@ const projects = [
       "Helps users locate nearby trashcans via real-time mapping, and enables organizations to identify areas lacking waste disposal infrastructure.",
     tech: ["Android Studio", "Firebase", "Google Maps API", "Java", "GCP"],
     link: "https://devpost.com/software/trashcan-finder",
+  },
+  {
+    title: "VR Headset for Education",
+    year: 2019,
+    description:
+      "A prototype educational VR headset built from a Jetson Nano, Google Cardboard, and Unreal Engine. Developed hand-tracking neural nets for embedded inference (TFLite/LiteRT) to control the interface with hands. Built a whiteboard app with finger-drawing and educational content.",
+    tech: ["Jetson Nano", "Unreal Engine", "TFLite", "Computer Vision", "C++"],
   },
 ];
 
@@ -100,7 +169,18 @@ export default function ProjectsPage() {
               Projects
             </h1>
             <p className="text-neutral-500 text-sm mb-10">
-              Hackathon builds and side projects.
+              Hackathon builds and side projects. Many of these were built in
+              collaboration with friends and family — most often with my twin
+              brother,{" "}
+              <a
+                href="https://www.linkedin.com/in/sid-preetham-245768166/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-neutral-300 transition-colors"
+              >
+                Sid
+              </a>
+              .
             </p>
 
             {/* Timeline */}
