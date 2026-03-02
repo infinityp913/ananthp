@@ -36,7 +36,7 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <p className="text-neutral-400 text-sm mt-2">
-              Entrepreneur + ML Engineer + Software Engineer + AI Orchestrator
+              Entrepreneur + ML Engineer + Software Engineer + AI Agent Orchestrator
             </p>
             <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
               <a
@@ -75,28 +75,11 @@ export default function Home() {
                   <path d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.79-.25.79-.56v-2.01c-3.22.7-3.9-1.38-3.9-1.38-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.72 1.27 3.39.97.1-.75.41-1.27.75-1.56-2.57-.29-5.27-1.28-5.27-5.72 0-1.27.46-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.18 0 0 .98-.31 3.2 1.19a11.07 11.07 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.66.23 2.88.11 3.18.75.81 1.2 1.84 1.2 3.11 0 4.45-2.7 5.42-5.28 5.71.42.36.8 1.08.8 2.18v3.23c0 .31.2.66.8.56A11.5 11.5 0 0 0 12 .5z" />
                 </svg>
               </a>
-              <a
-                className="hover:text-neutral-200 transition-all"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://twitter.com/ananthp_"
-                aria-label="X"
-                title="X"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path d="M18.901 2H22l-7.348 8.394L23.5 22h-6.78l-5.3-6.905L5.6 22H2.5l7.86-8.98L.5 2h6.95l4.8 6.31L18.901 2zM16.8 19.2h1.9L7.2 4.7H5.1l11.7 14.5z" />
-                </svg>
-              </a>
             </div>
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
               <br></br>
               <a
+                className="underline underline-offset-4"
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.youtube.com/watch?v=k6C8SX0mWP0"
