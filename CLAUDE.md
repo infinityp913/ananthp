@@ -32,6 +32,7 @@ npm run lint     # Run ESLint (next/core-web-vitals config)
 - JavaScript (ES2020+), Node 24.x + Next.js 13.2.4 (Pages Router), React 18.2.0, Tailwind CSS 3.x (001-project-page)
 - N/A — all project data is static, declared in the page file (001-project-page)
 - N/A — all movie data is statically declared in the page file (001-movies-ranking)
+- N/A — all content is static, declared in page files (003-project-links-nav)
 
 ## Recent Changes
 - 001-project-page: Added JavaScript (ES2020+), Node 24.x + Next.js 13.2.4 (Pages Router), React 18.2.0, Tailwind CSS 3.x

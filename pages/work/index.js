@@ -32,13 +32,13 @@ export default function WorkPage() {
               />
             </div>
             <h1
-              className={`font-semibold text-2xl text-white mb-5 ${libreBaskerville}`}
+              className={`font-semibold text-2xl text-white mb-5 ${libreBaskerville.className}`}
             >
               My work
             </h1>
-            <p>Entrepreneur, ML and Software Engineer.</p>
-            <p>Working towards making financial freedom accessible to as many people as possible.</p>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <p className="text-neutral-500 text-sm mb-10">
+              Entrepreneur, ML and Software Engineer.
+            </p>
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Matherium
             </h2>
@@ -83,25 +83,30 @@ export default function WorkPage() {
               </li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-            <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Nike
-            </h2>
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
             <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
               ML Engineer, Oct 2024 — Present
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                At{" "}
-                Nike, I am currently building a GraphRAG-powered AI assistant trained on Nike's macroeconomic and competitive landscape using government and media documents, leveraging LlamaIndex, AWS' GraphRAG-toolkit, and LibreChat.
+                At Nike, I am currently building a GraphRAG-powered AI assistant
+                trained on Nike's macroeconomic and competitive landscape using
+                government and media documents, leveraging LlamaIndex, AWS'
+                GraphRAG-toolkit, and LibreChat.
               </li>
               <li>
-                Enhanced AI assistant accountability by implementing source attribution and statement tracking in the UI, ensuring transparency and traceability of information.
+                Enhanced AI assistant accountability by implementing source
+                attribution and statement tracking in the UI, ensuring
+                transparency and traceability of information.
               </li>
               <li>
-                Deployed Generative AI solutions to help discover Nike products in media assets using object detection, segmentation and vector search via Databricks and AWS services such as SageMaker.
+                Deployed Generative AI solutions to help discover Nike products
+                in media assets using object detection, segmentation and vector
+                search via Databricks and AWS services such as SageMaker.
               </li>
               <li>
-                Leveraged Claude 3.5 Sonnet to generate descriptions and metadata tags for Nike products in marketing assets.
+                Leveraged Claude 3.5 Sonnet to generate descriptions and
+                metadata tags for Nike products in marketing assets.
               </li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
