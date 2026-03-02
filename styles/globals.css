@@ -13,3 +13,21 @@ section{
 a:not(footer a){
   color:gray
 }
+
+/* Project card scroll animations */
+.project-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js-animations .project-card {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .js-animations .project-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
