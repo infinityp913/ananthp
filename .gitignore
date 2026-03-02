@@ -1,2 +1,7 @@
 node_modules
 .next
+*.log
+.env*
+coverage/
+.DS_Store
+Thumbs.db
