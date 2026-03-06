@@ -40,47 +40,42 @@ export default function WorkPage() {
               Entrepreneur, ML and Software Engineer.
             </p>
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Matherium
+              Chalkboard
             </h2>
             <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
-              Co-founder & ML Engineer, Feb 2022 — Present
+              Co-founder, Feb 2026 — Present
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                At{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://matherium.com"
-                >
-                  Matherium
-                </a>
-                , I managed a team of 3 to develop an AI SaaS startup developing
-                AI Call Agents for businesses.
+                Building and training an in-house video generation model with a
+                V-JEPA 2 Encoder + Stable Diffusion decoder using a two-phased
+                Self-Supervised + Labeled Supervised Training approach.
+              </li>
+            </ul>
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              Matherium
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              Co-Founder, May 2025 — Feb 2026
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                Built an AI mock F1 visa interviewer using voice AI for
+                prospective international students coming to the US.
+              </li>
+              <li>1000+ users and 4000+ interview calls made.</li>
+              <li>
+                When we built AI voice agents for F1 mock interviews, our
+                payments were broken for people in India and students would try
+                paying with multiple cards (from their parents) to pay for our
+                tool — we knew we had product market fit then.
               </li>
               <li>
-                Engineered integrations with popular LLMs and tuned C++ based
-                speed-optimized Speech Neural nets, reducing response time by
-                25%.
+                Set up networking and databases. Trained neural networks and ran
+                inference tests.
               </li>
-              <li>
-                Led code reviews, new system architecture design sessions, code
-                testing and source control management.
-              </li>
-              <li>
-                Designed and Implemented a multi-threaded, concurrent WebRTC
-                streaming back-end for P2P communication with Go (Golang),
-                Ffmpeg and MediaStreams for real-time stream processing,
-                reducing latency by 65%.
-              </li>
-              <li>
-                Designed and Shipped a Full Stack App using Next.js, Tailwind
-                CSS, React, Flask, Node, Nginx.
-              </li>
-              <li>
-                Set up networking, logging and monitoring systems on Linux, Bash
-                (Ubuntu and Arch Linux)
-              </li>
+              <li>Designed and built our Next.js app and landing page.</li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
@@ -89,24 +84,72 @@ export default function WorkPage() {
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                At Nike, I am currently building a GraphRAG-powered AI assistant
-                trained on Nike's macroeconomic and competitive landscape using
-                government and media documents, leveraging LlamaIndex, AWS'
-                GraphRAG-toolkit, and LibreChat.
+                Driving data federation across platforms for a single-truth KPI
+                reporting service.
               </li>
               <li>
-                Enhanced AI assistant accountability by implementing source
-                attribution and statement tracking in the UI, ensuring
-                transparency and traceability of information.
+                Worked on a GraphRAG agent to enable analysts to query market
+                and competitive intelligence questions and get source-cited
+                answers from frequently ingested, approved documents and
+                sources. Used LlamaIndex and AWS GraphRAG toolkit.
               </li>
               <li>
-                Deployed Generative AI solutions to help discover Nike products
-                in media assets using object detection, segmentation and vector
-                search via Databricks and AWS services such as SageMaker.
+                Worked on Computer Vision ML infrastructure using AWS SageMaker,
+                Docker, Databricks, and MLflow.
               </li>
               <li>
-                Leveraged Claude 3.5 Sonnet to generate descriptions and
-                metadata tags for Nike products in marketing assets.
+                Improved product detection algorithm accuracy by 10% through
+                systematic MLflow experimentation.
+              </li>
+            </ul>
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              Tharros Archaeological Research Project
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              Software Engineer (Photogrammetry and Volumetrics), Jun - Jul 2025
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                Automated manual photogrammetry and volumetric visualization
+                processes of 150+ Roman/Punic excavation trenches in Sardinia,
+                Italy.
+              </li>
+              <li>
+                Built an end-to-end automated workflow from photographs from
+                trenches to 3D models generated using CloudCompare, Blender,
+                and Metashape.
+              </li>
+              <li>Increased turnaround time by 70%+.</li>
+              <li>Enabled parallelization of processes.</li>
+            </ul>
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              AI Voice Agents for Customer Service
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              Co-Founder, Jan 2023 — May 2024
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                Built call agents for customer service by hacking up a Go
+                server to orchestrate MediaStreams between Whisper (STT), Vosk
+                (ASR), TransformerTTS (TTS), Haystack and a basic Language
+                Model.
+              </li>
+            </ul>
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              Interactive AI Avatars for Customer Service
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              Co-Founder, Feb 2022 — Jan 2023
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                Designed and trained a TTS model. Used Whisper for STT. Helped
+                design and train the Deepfake GAN model for AI avatars. Created
+                an early MVP to demonstrate the idea to customers.
               </li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
@@ -244,6 +287,29 @@ export default function WorkPage() {
                 Led discussion sections for 120+ CS sophomores and juniors the
                 fundamentals of good programming methodologies including
                 Memoization and Dynamic Programming.
+              </li>
+            </ul>
+
+            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <h2 className="font-medium text-xl mb-1 tracking-tighter">
+              Pompeii Artistic Landscape Project
+            </h2>
+            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+              NLP Research Assistant, Feb 2019 — Sep 2021
+            </p>
+            <ul className="leading-relaxed list-disc">
+              <li>
+                Developed NLP algorithms to extract from unstructured data to
+                contribute to a database for the digital mapping of Pompeii for
+                a $250M Getty-funded Project —{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://palp.p-lod.umasscreate.net/"
+                >
+                  Pompeii Artistic Landscape Project
+                </a>
+                .
               </li>
             </ul>
           </div>
