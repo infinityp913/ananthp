@@ -21,19 +21,29 @@ const projects = [
     link: "https://github.com/garygao333/cloudcomparescript",
   },
   {
-    title: "RTC Go Server",
+    title: "Real-Time WebRTC Audio Routing Server for Voice Agents",
     year: 2023,
     description:
       "A concurrent Go server that brokers real-time WebRTC connections between browser clients and on-demand server clients, routing audio streams through Speech-to-Text. The backbone infrastructure for Ria Voice.",
     tech: ["Go", "WebRTC", "Speech-to-Text", "MediaStreams"],
-    link: "https://github.com/infinityp913/rtc-go-server",
+    link: "https://github.com/infinityp913/voice-agent-webrtc-router",
   },
   {
     title: "Ria Voice",
     year: 2023,
     description:
       "Voice agents for customer service — hacked together Vosk for ASR, a custom TTS pipeline (Tacotron / WaveGlow / HiFi-GAN) and Whisper for STT, all orchestrated by a concurrent Go server across multiple MediaStreams. Integrated GPT and tuned Whisper.cpp, cutting response time by 25%.",
-    tech: ["Go", "WebRTC", "Whisper", "Next.js", "React", "Flask", "Nginx", "TTS", "LLM"],
+    tech: [
+      "Go",
+      "WebRTC",
+      "Whisper",
+      "Next.js",
+      "React",
+      "Flask",
+      "Nginx",
+      "TTS",
+      "LLM",
+    ],
     link: "https://github.com/a13m-matherium/ria-voice-website",
   },
   {
