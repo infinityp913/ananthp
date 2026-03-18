@@ -13,6 +13,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "Personal Website",
+    year: 2023,
+    description:
+      "This site — a personal portfolio built with Next.js 13 (Pages Router), React 18, and Tailwind CSS. Deployed on Vercel. Inspired by Lee Robinson's website.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    link: "https://github.com/infinityp913/ananthp",
+  },
+  {
     title: "I-JEPA",
     year: 2026,
     description:
