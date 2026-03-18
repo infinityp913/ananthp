@@ -28,11 +28,10 @@ npm run lint     # Run ESLint (next/core-web-vitals config)
 
 **Content:** Page content (bio, work history, links) lives directly in the page files — there is no separate CMS or data layer. Work history is in `pages/work/index.js`; bio/intro is in `pages/index.js`.
 
-## Active Technologies
-- JavaScript (ES2020+), Node 24.x + Next.js 13.2.4 (Pages Router), React 18.2.0, Tailwind CSS 3.x (001-project-page)
-- N/A — all project data is static, declared in the page file (001-project-page)
-- N/A — all movie data is statically declared in the page file (001-movies-ranking)
-- N/A — all content is static, declared in page files (003-project-links-nav)
+**Navbar:** The shared navigation lives in `components/Navbar.jsx` and is rendered globally via `pages/_app.js`.
 
-## Recent Changes
-- 001-project-page: Added JavaScript (ES2020+), Node 24.x + Next.js 13.2.4 (Pages Router), React 18.2.0, Tailwind CSS 3.x
+**Navbar items and destinations:**
+- `Home` → `/` (main landing page, `pages/index.js`)
+- `Work` → `/work` (work history page, `pages/work/index.js`)
+- `Projects` → `/projects` (projects page, `pages/projects/index.js`)
+

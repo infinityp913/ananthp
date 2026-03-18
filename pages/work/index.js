@@ -45,13 +45,6 @@ export default function WorkPage() {
             <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
               Co-founder, Feb 2026 — Present
             </p>
-            <ul className="leading-relaxed list-disc">
-              <li>
-                Building and training an in-house video generation model with a
-                V-JEPA 2 Encoder + Stable Diffusion decoder using a two-phased
-                Self-Supervised + Labeled Supervised Training approach.
-              </li>
-            </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Matherium

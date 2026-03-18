@@ -13,6 +13,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "I-JEPA",
+    year: 2026,
+    description:
+      "A from-scratch PyTorch implementation of I-JEPA — Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (Assran et al., Meta AI 2023). Implements a ViT backbone with a context encoder, EMA target encoder, and a predictor that learns entirely in representation space — no contrastive loss or pixel reconstruction required.",
+    tech: ["PyTorch", "Python", "ViT", "Self-Supervised Learning"],
+    link: "https://github.com/infinityp913/i-jepa",
+  },
+  {
     title: "CloudCompare Automation for Archaeological Volumetrics",
     year: 2025,
     description:
