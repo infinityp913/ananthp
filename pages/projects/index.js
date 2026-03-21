@@ -128,8 +128,8 @@ const projects = [
     title: "VR Headset for Education",
     year: 2019,
     description:
-      "A prototype educational VR headset built from a Jetson Nano, Google Cardboard, and Unreal Engine. Developed hand-tracking neural nets for embedded inference (TFLite/LiteRT) to control the interface with hands. Built a whiteboard app with finger-drawing and educational content.",
-    tech: ["Jetson Nano", "Unreal Engine", "TFLite", "Computer Vision", "C++"],
+      "A prototype educational VR headset built from a Jetson Nano, Google Cardboard, Unreal Engine and TensorRT. Developed hand-tracking neural nets for embedded inference (TFLite/LiteRT) to control the interface with hands. Built a whiteboard app with finger-drawing and educational content.",
+    tech: ["Jetson Nano", "Unreal Engine", "TFLite", "TensorRT", "Computer Vision", "C++"],
   },
 ];
 

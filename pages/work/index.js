@@ -110,8 +110,8 @@ export default function WorkPage() {
               </li>
               <li>
                 Built an end-to-end automated workflow from photographs from
-                trenches to 3D models generated using CloudCompare, Blender,
-                and Metashape.
+                trenches to 3D models generated using CloudCompare, Blender, and
+                Metashape.
               </li>
               <li>Increased turnaround time by 70%+.</li>
               <li>Enabled parallelization of processes.</li>
@@ -125,10 +125,9 @@ export default function WorkPage() {
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                Built call agents for customer service by hacking up a Go
-                server to orchestrate MediaStreams between Whisper (STT), Vosk
-                (ASR), TransformerTTS (TTS), Haystack and a basic Language
-                Model.
+                Built call agents for customer service by hacking up a Go server
+                to orchestrate MediaStreams between Whisper (STT), Vosk (ASR),
+                TransformerTTS (TTS), Haystack and a basic Language Model.
               </li>
             </ul>
             <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
@@ -255,12 +254,12 @@ export default function WorkPage() {
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                Built a prototype for a VR headset with a Jetson Nano, lenses
-                and Unreal Engine.
+                Built a prototype for a VR headset with a Jetson Nano, lenses,
+                Unreal Engine and TensorRT.
               </li>
               <li>
                 Developed Computer Vision neural nets for embedded systems
-                (TFLite) to use hands to control the interface.
+                (TFLite/LiteRT) to use hands to control the interface.
               </li>
               <li>
                 Implemented a Whiteboard app with the ability to draw +
