@@ -18,12 +18,12 @@ describe('ProjectsPage', () => {
     expect(titleEl.closest('a')).toBeNull();
   });
 
-  it('[link to project] anchor exists for a project with a link and has correct attributes', () => {
+  it('destination-aware link label exists for a Devpost project and has correct attributes', () => {
     render(<ProjectsPage />);
-    // Find the DonateIt title, walk up to its card, then find the link label within
+    // DonateIt links to Devpost — label should be 'Devpost ↗'
     const titleEl = screen.getByText('DonateIt');
     const card = titleEl.closest('.project-card');
-    const linkLabel = within(card).getByText('[link to project]');
+    const linkLabel = within(card).getByText('Devpost ↗');
     expect(linkLabel.tagName).toBe('A');
     expect(linkLabel).toHaveAttribute('href', 'https://devpost.com/software/donateit-4il5tg');
     expect(linkLabel).toHaveAttribute('target', '_blank');
@@ -45,6 +45,37 @@ describe('ProjectsPage', () => {
   });
 });
 
+describe('ProjectsPage — destination-aware link labels', () => {
+  it('GitHub-linked project shows "GitHub ↗"', () => {
+    render(<ProjectsPage />);
+    // I-JEPA links to github.com
+    const ijepaCard = screen.getByText('I-JEPA').closest('.project-card');
+    expect(within(ijepaCard).getByText('GitHub ↗').tagName).toBe('A');
+  });
+
+  it('Devpost-linked project shows "Devpost ↗"', () => {
+    render(<ProjectsPage />);
+    const donateitCard = screen.getByText('DonateIt').closest('.project-card');
+    expect(within(donateitCard).getByText('Devpost ↗').tagName).toBe('A');
+  });
+
+  it('other-linked project shows "Open ↗"', () => {
+    render(<ProjectsPage />);
+    // PALP links to palp-art.netlify.app
+    const palpCard = screen.getByText('Pompeii Artistic Landscape Project').closest('.project-card');
+    expect(within(palpCard).getByText('Open ↗').tagName).toBe('A');
+  });
+
+  it('no-link project renders no link label', () => {
+    render(<ProjectsPage />);
+    // GPU Server has no link property
+    const gpuCard = screen.getByText('GPU Server').closest('.project-card');
+    expect(within(gpuCard).queryByText('GitHub ↗')).toBeNull();
+    expect(within(gpuCard).queryByText('Devpost ↗')).toBeNull();
+    expect(within(gpuCard).queryByText('Open ↗')).toBeNull();
+  });
+});
+
 describe('ProjectsPage — no-link rendering', () => {
   it('project titles are never rendered as anchors', () => {
     render(<ProjectsPage />);
@@ -54,16 +85,44 @@ describe('ProjectsPage — no-link rendering', () => {
     });
   });
 
-  it('projects with a link show a [link to project] anchor; projects without do not', () => {
+  it('projects with a link show a destination label anchor; projects without do not', () => {
     render(<ProjectsPage />);
 
-    // DonateIt has a link — expect [link to project] in its card
+    // DonateIt has a link — expect 'Devpost ↗' in its card
     const donateitCard = screen.getByText('DonateIt').closest('.project-card');
-    expect(within(donateitCard).getByText('[link to project]').tagName).toBe('A');
+    expect(within(donateitCard).getByText('Devpost ↗').tagName).toBe('A');
 
-    // "GPU Server" has no link — expect no [link to project] in its card
+    // GPU Server has no link — expect no link label in its card
     const gpuCard = screen.getByText('GPU Server').closest('.project-card');
-    expect(within(gpuCard).queryByText('[link to project]')).toBeNull();
+    expect(within(gpuCard).queryByText('Open ↗')).toBeNull();
+  });
+});
+
+describe('ProjectsPage — memoji removed', () => {
+  it('memoji image is not rendered on projects page', () => {
+    render(<ProjectsPage />);
+    const memoji = screen.queryByAltText('Ananth Preetham');
+    expect(memoji).toBeNull();
+  });
+});
+
+describe('ProjectsPage — active nav state', () => {
+  it('projects nav link has text-neutral-200 when pathname is /projects', () => {
+    render(<ProjectsPage />);
+    const projectsLink = screen.getByRole('link', { name: /^projects$/i });
+    expect(projectsLink.className).toContain('text-neutral-200');
+  });
+
+  it('home nav link does not have text-neutral-200 when on projects page', () => {
+    render(<ProjectsPage />);
+    const homeLink = screen.getByRole('link', { name: /^home$/i });
+    expect(homeLink.className).not.toContain('text-neutral-200');
+  });
+
+  it('work nav link does not have text-neutral-200 when on projects page', () => {
+    render(<ProjectsPage />);
+    const workLink = screen.getByRole('link', { name: /^work$/i });
+    expect(workLink.className).not.toContain('text-neutral-200');
   });
 });
 
