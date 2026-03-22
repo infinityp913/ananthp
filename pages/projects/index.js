@@ -133,6 +133,7 @@ const projects = [
 ];
 
 function linkLabel(href) {
+  if (!href) return 'Open ↗';
   if (href.includes('github.com')) return 'GitHub ↗';
   if (href.includes('devpost.com')) return 'Devpost ↗';
   return 'Open ↗';
@@ -152,8 +153,6 @@ export default function ProjectsPage() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
           }
         });
       },
