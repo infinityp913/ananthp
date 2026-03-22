@@ -59,10 +59,12 @@ npm start
 
 High-level structure (simplified):
 
-- `pages/` – Next.js pages (e.g. `index.js`, `work/index.js`)
+- `pages/` – Next.js pages (`index.js`, `work/index.js`, `projects/index.js`)
 - `components/` – Reusable UI components (e.g. `Navbar.jsx`)
 - `styles/` – Global and Tailwind-related styles
 - `public/` – Static assets
+- `__tests__/` – Jest + Testing Library unit tests (home, work, projects)
+- `specs/` – Feature specs, plans, and task breakdowns
 
 ---
 

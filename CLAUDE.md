@@ -17,10 +17,12 @@ npm run lint     # Run ESLint (next/core-web-vitals config)
 **Framework:** Next.js 13 with Pages Router (not App Router).
 
 **Key directories:**
-- `pages/` — Route pages (`_app.js`, `_document.js`, `index.js`, `work/index.js`)
+- `pages/` — Route pages (`_app.js`, `_document.js`, `index.js`, `work/index.js`, `projects/index.js`)
 - `components/` — Reusable components (currently only `Navbar.jsx`)
 - `styles/globals.css` — Global Tailwind + custom CSS (dark-themed, `#0d1117` background)
 - `public/` — Static assets (images, favicon)
+- `__tests__/` — Jest + Testing Library unit tests (`home/`, `work/`, `projects/`)
+- `specs/` — Feature specs, plans, and task breakdowns (gstack speckit workflow)
 
 **Path alias:** `@/*` maps to the project root via `jsconfig.json`.
 

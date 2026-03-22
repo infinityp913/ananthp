@@ -13,6 +13,49 @@ const libreBaskerville = Libre_Baskerville({
   style: ['normal', 'italic'],
 });
 
+describe('WorkPage — mobile padding', () => {
+  it('section has px-6 class for mobile base padding', () => {
+    const { container } = render(<WorkPage />);
+    const section = container.querySelector('section');
+    expect(section.className).toContain('px-6');
+  });
+
+  it('section does not have bare px-20 without responsive prefix', () => {
+    const { container } = render(<WorkPage />);
+    const section = container.querySelector('section');
+    const classes = section.className.split(' ');
+    expect(classes).not.toContain('px-20');
+  });
+});
+
+describe('WorkPage — memoji removed', () => {
+  it('memoji image is not rendered on work page', () => {
+    render(<WorkPage />);
+    const memoji = screen.queryByAltText('Ananth Preetham');
+    expect(memoji).toBeNull();
+  });
+});
+
+describe('WorkPage — active nav state', () => {
+  it('work nav link has text-neutral-200 when pathname is /work', () => {
+    render(<WorkPage />);
+    const workLink = screen.getByRole('link', { name: /^work$/i });
+    expect(workLink.className).toContain('text-neutral-200');
+  });
+
+  it('home nav link does not have text-neutral-200 when on work page', () => {
+    render(<WorkPage />);
+    const homeLink = screen.getByRole('link', { name: /^home$/i });
+    expect(homeLink.className).not.toContain('text-neutral-200');
+  });
+
+  it('projects nav link does not have text-neutral-200 when on work page', () => {
+    render(<WorkPage />);
+    const projectsLink = screen.getByRole('link', { name: /^projects$/i });
+    expect(projectsLink.className).not.toContain('text-neutral-200');
+  });
+});
+
 describe('WorkPage — heading font', () => {
   it('Work page h1 className does not contain [object Object]', () => {
     render(<WorkPage />);

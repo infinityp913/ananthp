@@ -34,7 +34,7 @@ Both pages (`index.js`, `work/index.js`) follow this structure:
 1. `<Head>` — title, viewport, favicon
 2. `<section>` wrapper with padding and flex layout
 3. `<Navbar>` component
-4. `<Image>` memoji (100×100, `/memoji.png`)
+4. `<Image>` memoji (100×100, `/memoji.png`) — **home page only**; interior pages (work, projects) omit the memoji
 5. `<h1>` with Libre Baskerville applied via inline className
 6. Page body content
 7. Footer (home page only) — Steve Jobs quote + "Inspired by leerob.io"
@@ -54,4 +54,4 @@ npm run lint     # ESLint
 
 This constitution supersedes ad-hoc decisions. All changes to structure, dependencies, or styling approach must comply with these principles. Content-only edits (bio text, work bullets, links) do not require principle review.
 
-**Version**: 1.0.0 | **Ratified**: 2026-02-27 | **Last Amended**: 2026-02-27
+**Version**: 1.1.0 | **Ratified**: 2026-02-27 | **Last Amended**: 2026-03-22

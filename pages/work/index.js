@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
-import Image from "next/image";
-
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -18,19 +16,10 @@ export default function WorkPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="w-screen m-auto pb-16 px-20 lg:px-0 flex items-center justify-center md:flex-row max-w-2xl text-neutral-200">
+      <section className="w-screen m-auto pb-16 px-6 sm:px-20 lg:px-0 flex items-center justify-center md:flex-row max-w-2xl text-neutral-200">
         <div className="flex">
           <div className="mt-[5rem]">
             <Navbar></Navbar>
-            <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
-              <Image
-                alt="Ananth Preetham"
-                src="/memoji.png"
-                width={100}
-                height={100}
-                priority
-              />
-            </div>
             <h1
               className={`font-semibold text-2xl text-white mb-5 ${libreBaskerville.className}`}
             >
