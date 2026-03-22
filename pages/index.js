@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
               <a
-                className="hover:text-neutral-200 transition-all"
+                className="hover:text-neutral-200 transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://linkedin.com/in/ananth-preetham"
@@ -58,7 +58,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                className="hover:text-neutral-200 transition-all"
+                className="hover:text-neutral-200 transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://github.com/infinityp913"
@@ -77,7 +77,6 @@ export default function Home() {
               </a>
             </div>
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
-              <br></br>
               <a
                 className="underline underline-offset-4"
                 target="_blank"
@@ -86,8 +85,7 @@ export default function Home() {
               >
                 Persevering when things get hard.
               </a>
-              <br></br>
-              <br></br>
+              <div className="mt-4">
               <details>
                 <summary className="cursor-pointer">Notes to myself:</summary>
                 <ol className="list-decimal ml-12">
@@ -125,10 +123,11 @@ export default function Home() {
                   </li>
                 </ol>
               </details>
+              </div>
             </div>
           </div>
         </div>
-        <footer className="py-24 px-4 text-neutral-600">
+        <footer className="py-12 px-4 text-neutral-600">
           <div className="max-w-xl mx-auto">
             <blockquote className="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
               <p className="mb-2">

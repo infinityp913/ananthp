@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { groupByYear } from "@/lib/groupByYear";
 
@@ -133,6 +132,12 @@ const projects = [
   },
 ];
 
+function linkLabel(href) {
+  if (href.includes('github.com')) return 'GitHub ↗';
+  if (href.includes('devpost.com')) return 'Devpost ↗';
+  return 'Open ↗';
+}
+
 const yearGroups = groupByYear(projects);
 const flatProjects = yearGroups.flatMap((g) => g.projects);
 
@@ -180,15 +185,6 @@ export default function ProjectsPage() {
         <div className="flex w-full">
           <div className="mt-[5rem] w-full">
             <Navbar />
-            <div className="flex items-start md:items-center my-2 flex-col md:flex-row">
-              <Image
-                alt="Ananth Preetham"
-                src="/memoji.png"
-                width={100}
-                height={100}
-                priority
-              />
-            </div>
             <h1
               className={`font-semibold text-2xl text-white mb-2 ${libreBaskerville.className}`}
             >
@@ -252,7 +248,7 @@ export default function ProjectsPage() {
                                   rel="noopener noreferrer"
                                   className="block text-xs text-neutral-500 hover:text-neutral-300 transition-colors mt-0.5"
                                 >
-                                  [link to project]
+                                  {linkLabel(project.link)}
                                 </a>
                               )}
                             </div>
