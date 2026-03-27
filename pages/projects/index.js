@@ -12,6 +12,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "HabitTracker",
+    year: 2026,
+    description:
+      "A minimal iPhone habit tracker with a home screen widget. Track one habit, see your streak — that's it. Built with Swift and WidgetKit: a small widget shows the streak count, a medium widget has interactive check/X buttons via AppIntents. Daily notifications with inline actions, a configurable start date to preserve existing streaks, and all data stored in a shared App Group so the widget and app stay in sync.",
+    tech: ["Swift", "SwiftUI", "WidgetKit", "AppIntents", "iOS 17"],
+    link: "https://github.com/infinityp913/habit-tracker",
+  },
+  {
     title: "Personal Website",
     year: 2023,
     description:
