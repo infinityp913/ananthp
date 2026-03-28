@@ -12,6 +12,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "I-JEPA",
+    year: 2026,
+    description:
+      "A from-scratch PyTorch implementation of I-JEPA — Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (Assran et al., Meta AI 2023). Implements a ViT backbone with a context encoder, EMA target encoder, and a predictor that learns entirely in representation space — no contrastive loss or pixel reconstruction required.",
+    tech: ["PyTorch", "Python", "ViT", "Self-Supervised Learning"],
+    link: "https://github.com/infinityp913/i-jepa",
+  },
+  {
     title: "HabitTracker",
     year: 2026,
     description:
@@ -28,18 +36,28 @@ const projects = [
     link: "https://github.com/infinityp913/ananthp",
   },
   {
-    title: "I-JEPA",
-    year: 2026,
-    description:
-      "A from-scratch PyTorch implementation of I-JEPA — Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (Assran et al., Meta AI 2023). Implements a ViT backbone with a context encoder, EMA target encoder, and a predictor that learns entirely in representation space — no contrastive loss or pixel reconstruction required.",
-    tech: ["PyTorch", "Python", "ViT", "Self-Supervised Learning"],
-    link: "https://github.com/infinityp913/i-jepa",
-  },
-  {
     title: "CloudCompare Automation for Archaeological Volumetrics",
     year: 2025,
-    description:
-      "A script to automate volumetric generation for excavated stratigraphic units (SUs) using CloudCompare processes, producing 3D objects viewable from all angles for post-excavation analysis and record keeping. Part of the Tharros Archaeological Research Project (TARP), directed by Dr. Eric Poehler and Dr. Steven Ellis at the University of Cincinnati. Output is archived on A.I.R., a visual archival platform for archaeological projects built by Paola Derudas at Lund University.",
+    description: (
+      <>
+        Built in Sardinia, Italy as part of the Tharros Archaeological Research
+        project. A script to automate volumetric generation for excavated
+        stratigraphic units (SUs) using CloudCompare processes, producing 3D
+        objects viewable from all angles for post-excavation analysis and
+        record keeping. Collaborated with the University of Cincinnati. Output
+        is archived on{" "}
+        <a
+          href="https://air.ht.lu.se/s/tharros/page/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          A.I.R.
+        </a>
+        , a visual archival platform for archaeological projects built by Paola
+        Derudas at Lund University.
+      </>
+    ),
     tech: ["Python", "CloudCompare", "3D Volumetrics", "Archaeology"],
     link: "https://github.com/garygao333/cloudcomparescript",
   },
@@ -136,15 +154,22 @@ const projects = [
     year: 2019,
     description:
       "A prototype educational VR headset built from a Jetson Nano, Google Cardboard, Unreal Engine and TensorRT. Developed hand-tracking neural nets for embedded inference (TFLite/LiteRT) to control the interface with hands. Built a whiteboard app with finger-drawing and educational content.",
-    tech: ["Jetson Nano", "Unreal Engine", "TFLite", "TensorRT", "Computer Vision", "C++"],
+    tech: [
+      "Jetson Nano",
+      "Unreal Engine",
+      "TFLite",
+      "TensorRT",
+      "Computer Vision",
+      "C++",
+    ],
   },
 ];
 
 function linkLabel(href) {
-  if (!href) return 'Open ↗';
-  if (href.includes('github.com')) return 'GitHub ↗';
-  if (href.includes('devpost.com')) return 'Devpost ↗';
-  return 'Open ↗';
+  if (!href) return "Open ↗";
+  if (href.includes("github.com")) return "GitHub ↗";
+  if (href.includes("devpost.com")) return "Devpost ↗";
+  return "Open ↗";
 }
 
 const yearGroups = groupByYear(projects);
@@ -164,7 +189,7 @@ export default function ProjectsPage() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     cardRefs.current.forEach((el) => {
