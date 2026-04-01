@@ -212,7 +212,7 @@ export default function WorkPage() {
                 >
                   Fidelity Investments
                 </a>
-                , I accelerated Fidelity's transition to a new Cloud platform by
+                , I accelerated Fidelity&apos;s transition to a new Cloud platform by
                 resolving performance bottlenecks through advanced CICD
                 pipelines; improved deployment efficiency by 40% and reduced
                 downtime by 25%.
