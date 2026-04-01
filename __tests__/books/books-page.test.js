@@ -53,18 +53,21 @@ describe('BooksPage — currently reading', () => {
 });
 
 describe('BooksPage — read list', () => {
-  it('renders all 10 read book titles', () => {
+  it('renders all 13 read book titles', () => {
     render(<BooksPage />);
     const expectedTitles = [
       'Project Hail Mary',
+      'Animal Farm',
+      '1984',
+      'How to Win Friends and Influence People',
+      'Never Split the Difference',
+      'Dopamine Nation',
       'The Gene: An Intimate History',
-      'And Then There Were None',
-      'The 7 Habits of Highly Effective People',
       "Man's Search for Meaning",
       'Sapiens: A Brief History of Humankind',
+      'The 7 Habits of Highly Effective People',
+      'And Then There Were None',
       'The Murder of Roger Ackroyd',
-      'Nineteen Eighty-Four',
-      'Animal Farm',
       'Five Little Pigs',
     ];
     expectedTitles.forEach((title) => {
@@ -72,7 +75,7 @@ describe('BooksPage — read list', () => {
     });
   });
 
-  it('renders all 10 authors', () => {
+  it('renders all 13 authors', () => {
     render(<BooksPage />);
     expect(screen.getByText('Andy Weir')).toBeInTheDocument();
     expect(screen.getByText('Siddhartha Mukherjee')).toBeInTheDocument();
@@ -85,6 +88,9 @@ describe('BooksPage — read list', () => {
     // George Orwell appears 2 times
     const orwells = screen.getAllByText('George Orwell');
     expect(orwells).toHaveLength(2);
+    expect(screen.getByText('Dale Carnegie')).toBeInTheDocument();
+    expect(screen.getByText('Chris Voss')).toBeInTheDocument();
+    expect(screen.getByText('Anna Lembke')).toBeInTheDocument();
   });
 
   it('read list is a <ul> element', () => {
@@ -94,20 +100,20 @@ describe('BooksPage — read list', () => {
     expect(lists.length).toBeGreaterThanOrEqual(1);
   });
 
-  it('5-star books appear before 4-star books in the DOM', () => {
+  it('"Project Hail Mary" appears before "Animal Farm" (custom order: PHM is first)', () => {
     render(<BooksPage />);
     const allText = document.body.textContent;
     const hailMaryIdx = allText.indexOf('Project Hail Mary');
-    const nineteenEightyFourIdx = allText.indexOf('Nineteen Eighty-Four');
-    expect(hailMaryIdx).toBeLessThan(nineteenEightyFourIdx);
+    const animalFarmIdx = allText.indexOf('Animal Farm');
+    expect(hailMaryIdx).toBeLessThan(animalFarmIdx);
   });
 
-  it('within 5-star rating, "And Then There Were None" appears before "Project Hail Mary" (alpha by title)', () => {
+  it('Agatha Christie books appear after non-Christie books', () => {
     render(<BooksPage />);
     const allText = document.body.textContent;
+    const sapienIdx = allText.indexOf('Sapiens');
     const andThenIdx = allText.indexOf('And Then There Were None');
-    const hailMaryIdx = allText.indexOf('Project Hail Mary');
-    expect(andThenIdx).toBeLessThan(hailMaryIdx);
+    expect(sapienIdx).toBeLessThan(andThenIdx);
   });
 });
 
