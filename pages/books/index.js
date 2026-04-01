@@ -63,7 +63,7 @@ export default function BooksPage() {
                       href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-neutral-200 text-sm hover:text-white transition-colors"
+                      className="font-medium text-neutral-200 text-sm hover:text-white hover:underline underline-offset-2 transition-colors block -my-2 py-2"
                     >
                       {book.title}
                     </a>
@@ -87,7 +87,7 @@ export default function BooksPage() {
                       href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-neutral-200 text-sm hover:text-white transition-colors"
+                      className="font-medium text-neutral-200 text-sm hover:text-white hover:underline underline-offset-2 transition-colors block -my-2 py-2"
                     >
                       {book.title}
                     </a>
