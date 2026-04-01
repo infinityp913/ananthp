@@ -52,10 +52,10 @@ export default function BooksPage() {
               What I&apos;ve been reading.
             </p>
 
-            <p className="text-neutral-500 text-xs uppercase tracking-widest mb-4">
+            <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
               Currently reading
             </p>
-            <ul className="list-none space-y-5 mb-10">
+            <ul className="list-none space-y-5 mb-16">
               {currentlyReading.map((book) => (
                 <li key={book.title} className="flex items-start gap-3">
                   <div className="min-w-0">
@@ -75,7 +75,7 @@ export default function BooksPage() {
               ))}
             </ul>
 
-            <p className="text-neutral-500 text-xs uppercase tracking-widest mb-4">
+            <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
               Read
             </p>
             <ul className="list-none space-y-5">
