@@ -90,7 +90,7 @@ export default function Home() {
                 <summary className="cursor-pointer">Notes to myself:</summary>
                 <ol className="list-decimal ml-12">
                   <li>
-                    There's always{" "}
+                    There&apos;s always{" "}
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -112,9 +112,9 @@ export default function Home() {
                     is to choose your attitude in any given set of
                     circumstances.
                   </li>
-                  <li>Don't lose the power to see the good in people.</li>
+                  <li>Don&apos;t lose the power to see the good in people.</li>
                   <li>
-                    You just can't beat the person who never gives up. - Babe
+                    You just can&apos;t beat the person who never gives up. - Babe
                     Ruth
                   </li>
                   <li>
@@ -131,7 +131,7 @@ export default function Home() {
           <div className="max-w-xl mx-auto">
             <blockquote className="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
               <p className="mb-2">
-                You can't connect the dots looking forward; you can only connect
+                You can&apos;t connect the dots looking forward; you can only connect
                 them looking backwards. So you have to trust that the dots will
                 somehow connect in your future.
               </p>
@@ -149,7 +149,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="underline text-neutral"
               >
-                Lee Robinson's page
+                Lee Robinson&apos;s page
               </a>
             </div>
           </div>
