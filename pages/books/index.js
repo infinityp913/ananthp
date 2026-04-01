@@ -16,14 +16,41 @@ const currentlyReading = [
 
 const books = [
   { title: "Project Hail Mary", author: "Andy Weir", rating: 5 },
-  { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee", rating: 5 },
-  { title: "Man's Search for Meaning", author: "Viktor E. Frankl", rating: 4.5 },
-  { title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", rating: 4.5 },
-  { title: "The 7 Habits of Highly Effective People", author: "Stephen R. Covey", rating: 4.5 },
   { title: "Animal Farm", author: "George Orwell", rating: 4 },
-  { title: "Nineteen Eighty-Four", author: "George Orwell", rating: 4 },
+  { title: "1984", author: "George Orwell", rating: 4 },
+  {
+    title: "How to Win Friends and Influence People",
+    author: "Dale Carnegie",
+    rating: 4,
+  },
+  { title: "Never Split the Difference", author: "Chris Voss", rating: 4.5 },
+  { title: "Dopamine Nation", author: "Anna Lembke", rating: 4 },
+  {
+    title: "The Gene: An Intimate History",
+    author: "Siddhartha Mukherjee",
+    rating: 5,
+  },
+  {
+    title: "Man's Search for Meaning",
+    author: "Viktor E. Frankl",
+    rating: 4.5,
+  },
+  {
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    rating: 4.5,
+  },
+  {
+    title: "The 7 Habits of Highly Effective People",
+    author: "Stephen R. Covey",
+    rating: 4.5,
+  },
   { title: "And Then There Were None", author: "Agatha Christie", rating: 5 },
-  { title: "The Murder of Roger Ackroyd", author: "Agatha Christie", rating: 4.5 },
+  {
+    title: "The Murder of Roger Ackroyd",
+    author: "Agatha Christie",
+    rating: 4.5,
+  },
   { title: "Five Little Pigs", author: "Agatha Christie", rating: 4 },
 ];
 
