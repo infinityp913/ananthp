@@ -20,10 +20,10 @@ describe('ProjectsPage', () => {
 
   it('destination-aware link label exists for a Devpost project and has correct attributes', () => {
     render(<ProjectsPage />);
-    // DonateIt links to Devpost — label should be 'Devpost ↗'
+    // DonateIt links to Devpost — label should be 'Devpost ↗︎'
     const titleEl = screen.getByText('DonateIt');
     const card = titleEl.closest('.project-card');
-    const linkLabel = within(card).getByText('Devpost ↗');
+    const linkLabel = within(card).getByText('Devpost ↗︎');
     expect(linkLabel.tagName).toBe('A');
     expect(linkLabel).toHaveAttribute('href', 'https://devpost.com/software/donateit-4il5tg');
     expect(linkLabel).toHaveAttribute('target', '_blank');
@@ -46,33 +46,35 @@ describe('ProjectsPage', () => {
 });
 
 describe('ProjectsPage — destination-aware link labels', () => {
-  it('GitHub-linked project shows "GitHub ↗"', () => {
+  it('GitHub-linked project shows "GitHub ↗︎"', () => {
     render(<ProjectsPage />);
-    // I-JEPA links to github.com
-    const ijepaCard = screen.getByText('I-JEPA').closest('.project-card');
-    expect(within(ijepaCard).getByText('GitHub ↗').tagName).toBe('A');
+    // I-JEPA links to github.com — use the title span (exact match) to find the card
+    const ijepaCard = screen.getAllByText('I-JEPA').find(
+      (el) => el.tagName === 'SPAN'
+    ).closest('.project-card');
+    expect(within(ijepaCard).getByText('GitHub ↗︎').tagName).toBe('A');
   });
 
-  it('Devpost-linked project shows "Devpost ↗"', () => {
+  it('Devpost-linked project shows "Devpost ↗︎"', () => {
     render(<ProjectsPage />);
     const donateitCard = screen.getByText('DonateIt').closest('.project-card');
-    expect(within(donateitCard).getByText('Devpost ↗').tagName).toBe('A');
+    expect(within(donateitCard).getByText('Devpost ↗︎').tagName).toBe('A');
   });
 
-  it('other-linked project shows "Open ↗"', () => {
+  it('other-linked project shows "Open ↗︎"', () => {
     render(<ProjectsPage />);
     // PALP links to palp-art.netlify.app
     const palpCard = screen.getByText('Pompeii Artistic Landscape Project').closest('.project-card');
-    expect(within(palpCard).getByText('Open ↗').tagName).toBe('A');
+    expect(within(palpCard).getByText('Open ↗︎').tagName).toBe('A');
   });
 
   it('no-link project renders no link label', () => {
     render(<ProjectsPage />);
     // GPU Server has no link property
     const gpuCard = screen.getByText('GPU Server').closest('.project-card');
-    expect(within(gpuCard).queryByText('GitHub ↗')).toBeNull();
-    expect(within(gpuCard).queryByText('Devpost ↗')).toBeNull();
-    expect(within(gpuCard).queryByText('Open ↗')).toBeNull();
+    expect(within(gpuCard).queryByText('GitHub ↗︎')).toBeNull();
+    expect(within(gpuCard).queryByText('Devpost ↗︎')).toBeNull();
+    expect(within(gpuCard).queryByText('Open ↗︎')).toBeNull();
   });
 });
 
@@ -88,13 +90,13 @@ describe('ProjectsPage — no-link rendering', () => {
   it('projects with a link show a destination label anchor; projects without do not', () => {
     render(<ProjectsPage />);
 
-    // DonateIt has a link — expect 'Devpost ↗' in its card
+    // DonateIt has a link — expect 'Devpost ↗︎' in its card
     const donateitCard = screen.getByText('DonateIt').closest('.project-card');
-    expect(within(donateitCard).getByText('Devpost ↗').tagName).toBe('A');
+    expect(within(donateitCard).getByText('Devpost ↗︎').tagName).toBe('A');
 
     // GPU Server has no link — expect no link label in its card
     const gpuCard = screen.getByText('GPU Server').closest('.project-card');
-    expect(within(gpuCard).queryByText('Open ↗')).toBeNull();
+    expect(within(gpuCard).queryByText('Open ↗︎')).toBeNull();
   });
 });
 
