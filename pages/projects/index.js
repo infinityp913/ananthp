@@ -14,10 +14,42 @@ const projects = [
   {
     title: "I-JEPA",
     year: 2026,
-    description:
-      "A from-scratch PyTorch implementation of I-JEPA — Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (Assran et al., Meta AI 2023). Implements a ViT backbone with a context encoder, EMA target encoder, and a predictor that learns entirely in representation space — no contrastive loss or pixel reconstruction required.",
+    description: (
+      <>
+        A from-scratch PyTorch implementation of{" "}
+        <a
+          href="https://arxiv.org/abs/2301.08243"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          I-JEPA
+        </a>{" "}
+        (Assran et al., Meta AI 2023). ViT backbone with a context encoder, EMA
+        target encoder, and a predictor that learns in representation space — no
+        contrastive loss or pixel reconstruction. Reduced training time by
+        parallelizing target and prediction embedding generation and using mixed
+        precision training. Currently exploring RoPE embeddings and the Muon
+        optimizer for further efficiency gains.
+      </>
+    ),
     tech: ["PyTorch", "Python", "ViT", "Self-Supervised Learning"],
     link: "https://github.com/infinityp913/i-jepa",
+  },
+  {
+    title: "Agentic GIS",
+    year: 2026,
+    description:
+      "AI-powered pipeline that automates planset creation for urban bike lane infrastructure. Takes a street address and produces a 2-sheet PDF with gap analysis and plan drawings in under 40 seconds — collapsing what typically takes days into minutes. Uses NetworkX for topology-based connectivity gap detection, GeoPandas for map visualization, and Claude vision for generating engineering documents (cross-sections, construction notes, specs, quantity estimates). Built with my brother Sid.",
+    tech: [
+      "Python",
+      "Claude",
+      "NetworkX",
+      "GeoPandas",
+      "OpenStreetMap",
+      "ReportLab",
+    ],
+    link: "https://github.com/sid0913/agentic-gis",
   },
   {
     title: "HabitTracker",
@@ -166,10 +198,10 @@ const projects = [
 ];
 
 function linkLabel(href) {
-  if (!href) return "Open ↗";
-  if (href.includes("github.com")) return "GitHub ↗";
-  if (href.includes("devpost.com")) return "Devpost ↗";
-  return "Open ↗";
+  if (!href) return "Open ↗︎";
+  if (href.includes("github.com")) return "GitHub ↗︎";
+  if (href.includes("devpost.com")) return "Devpost ↗︎";
+  return "Open ↗︎";
 }
 
 const yearGroups = groupByYear(projects);
