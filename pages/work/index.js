@@ -29,16 +29,16 @@ export default function WorkPage() {
               Entrepreneur, ML and Software Engineer.
             </p>
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Chalkboard
+              Stealth
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Co-founder, Feb 2026 — Present
             </p>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Matherium
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, May 2025 — Feb 2026
             </p>
             <ul className="leading-relaxed list-disc">
@@ -59,9 +59,9 @@ export default function WorkPage() {
               </li>
               <li>Designed and built our Next.js app and landing page.</li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               ML Engineer, Oct 2024 — Present
             </p>
             <ul className="leading-relaxed list-disc">
@@ -84,11 +84,11 @@ export default function WorkPage() {
                 systematic MLflow experimentation.
               </li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Tharros Archaeological Research Project
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Software Engineer (Photogrammetry and Volumetrics), Jun - Jul 2025
             </p>
             <ul className="leading-relaxed list-disc">
@@ -105,11 +105,11 @@ export default function WorkPage() {
               <li>Increased turnaround time by 70%+.</li>
               <li>Enabled parallelization of processes.</li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               AI Voice Agents for Customer Service
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, Jan 2023 — May 2024
             </p>
             <ul className="leading-relaxed list-disc">
@@ -119,11 +119,11 @@ export default function WorkPage() {
                 TransformerTTS (TTS), Haystack and a basic Language Model.
               </li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Interactive AI Avatars for Customer Service
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, Feb 2022 — Jan 2023
             </p>
             <ul className="leading-relaxed list-disc">
@@ -133,11 +133,11 @@ export default function WorkPage() {
                 an early MVP to demonstrate the idea to customers.
               </li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Pompeii Artistic Landscape Project
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Lead Software Engineer, Sep 2021 — Oct 2022
             </p>
             <ul className="leading-relaxed list-disc">
@@ -166,9 +166,9 @@ export default function WorkPage() {
                 roadblocks.
               </li>
             </ul>
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Machine Learning Engineer, Jun 2021 — Aug 2021
             </p>
             <ul className="leading-relaxed list-disc">
@@ -195,11 +195,11 @@ export default function WorkPage() {
               </li>
             </ul>
 
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Fidelity Investments
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Software Engineer (FUll Stack), Jun 2020 — Aug 2020
             </p>
             <ul className="leading-relaxed list-disc">
@@ -234,11 +234,11 @@ export default function WorkPage() {
               </li>
             </ul>
 
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Matherium VR
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Co-founder and Software Engineer, Sep 2019 — May 2021
             </p>
             <ul className="leading-relaxed list-disc">
@@ -256,11 +256,11 @@ export default function WorkPage() {
               </li>
             </ul>
 
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Computer Science @ University of Massachusetts Amherst
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               Teaching Assistant, Jan 2020 — May 2020
             </p>
             <ul className="leading-relaxed list-disc">
@@ -271,11 +271,11 @@ export default function WorkPage() {
               </li>
             </ul>
 
-            <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+            <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
               Pompeii Artistic Landscape Project
             </h2>
-            <p className="my-6 text-neutral-600 dark:text-neutral-400 text-sm">
+            <p className="my-6 text-neutral-400 text-sm">
               NLP Research Assistant, Feb 2019 — Sep 2021
             </p>
             <ul className="leading-relaxed list-disc">

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
@@ -10,6 +11,9 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export default function Home() {
+  const [showVideo, setShowVideo] = useState(false);
+  const [showNotes, setShowNotes] = useState(false);
+
   return (
     <>
       <Head>
@@ -35,10 +39,13 @@ export default function Home() {
             >
               Ananth Preetham
             </h1>
-            <p className="text-neutral-400 text-sm mt-2">
-              Entrepreneur + ML Engineer + Software Engineer + AI Agent Orchestrator
-            </p>
-            <div className="flex items-center mt-8 space-x-5 text-neutral-500 dark:text-neutral-400">
+            <div className="text-md mt-8 sm:max-w-[460px] space-y-3">
+              <p className="mb-8">Founder, ML engineer, AI systems builder.</p>
+              <p>Knew we&apos;d found <span className="bg-amber-400/30 px-0.5 rounded-sm">product market fit</span> when students tried card after card, borrowed from their parents, just to pay when our checkout broke.</p>
+              <p>Most engineers don&apos;t spend two summers on a Mediterranean dig site. At Tharros, a Roman-Carthaginian city in Sardinia, I automated 3D models and volumetric calculations for <span className="bg-amber-400/30 px-0.5 rounded-sm">a 2,000-year-old market district and burial ground</span>.</p>
+              <p>All four years of college and beyond, I built web and data systems to <span className="bg-amber-400/30 px-0.5 rounded-sm">make ancient Pompeii research more accessible</span>.</p>
+            </div>
+            <div className="flex items-center mt-8 space-x-5 text-neutral-500">
               <a
                 className="hover:text-neutral-200 transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 rel="noopener noreferrer"
@@ -77,52 +84,78 @@ export default function Home() {
               </a>
             </div>
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
-              <a
-                className="underline underline-offset-4"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.youtube.com/watch?v=k6C8SX0mWP0"
+              <button
+                className="flex items-center gap-2 text-left hover:text-neutral-300 transition-colors"
+                onClick={() => setShowVideo(!showVideo)}
               >
+                <span
+                  className={`text-neutral-500 text-xs transition-transform duration-200 ${showVideo ? "rotate-90" : ""}`}
+                >
+                  ▶
+                </span>
                 Persevering when things get hard.
-              </a>
+              </button>
+              {showVideo && (
+                <div className="mt-3">
+                  <iframe
+                    src="https://www.youtube.com/embed/k6C8SX0mWP0"
+                    title="Persevering when things get hard"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full aspect-video border-0"
+                  />
+                </div>
+              )}
               <div className="mt-4">
-              <details>
-                <summary className="cursor-pointer">Notes to myself:</summary>
-                <ol className="list-decimal ml-12">
-                  <li>
-                    There&apos;s always{" "}
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://youtu.be/xaTmv67WpRM?t=599"
-                    >
-                      a gap{" "}
-                    </a>
-                    between a stimulus and your response.
-                  </li>
-                  <li>
-                    Your{" "}
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X"
-                    >
-                      last human freedom{" "}
-                    </a>
-                    is to choose your attitude in any given set of
-                    circumstances.
-                  </li>
-                  <li>Don&apos;t lose the power to see the good in people.</li>
-                  <li>
-                    You just can&apos;t beat the person who never gives up. - Babe
-                    Ruth
-                  </li>
-                  <li>
-                    The secret is{" "}
-                    <span className="underline font-bold">Grit</span>.
-                  </li>
-                </ol>
-              </details>
+                <button
+                  className="flex items-center gap-2 text-left hover:text-neutral-300 transition-colors"
+                  onClick={() => setShowNotes(!showNotes)}
+                >
+                  <span
+                    className={`text-neutral-500 text-xs transition-transform duration-200 ${showNotes ? "rotate-90" : ""}`}
+                  >
+                    ▶
+                  </span>
+                  Notes to myself:
+                </button>
+                {showNotes && (
+                  <ol className="list-decimal ml-8 mt-3 space-y-1">
+                    <li>
+                      There&apos;s always{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://youtu.be/xaTmv67WpRM?t=599"
+                      >
+                        a gap{" "}
+                      </a>
+                      between a stimulus and your response.
+                    </li>
+                    <li>
+                      Your{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X"
+                      >
+                        last human freedom{" "}
+                      </a>
+                      is to choose your attitude in any given set of
+                      circumstances.
+                    </li>
+                    <li>
+                      Don&apos;t lose the power to see the good in people.
+                    </li>
+                    <li>
+                      You just can&apos;t beat the person who never gives up. -
+                      Babe Ruth
+                    </li>
+                    <li>
+                      The secret is{" "}
+                      <span className="underline font-bold">Grit</span>.
+                    </li>
+                  </ol>
+                )}
               </div>
             </div>
           </div>
@@ -131,9 +164,9 @@ export default function Home() {
           <div className="max-w-xl mx-auto">
             <blockquote className="text-xs leading-relaxed border-l-[0.5px] border-gray-700 pl-4">
               <p className="mb-2">
-                You can&apos;t connect the dots looking forward; you can only connect
-                them looking backwards. So you have to trust that the dots will
-                somehow connect in your future.
+                You can&apos;t connect the dots looking forward; you can only
+                connect them looking backwards. So you have to trust that the
+                dots will somehow connect in your future.
               </p>
               <p>
                 You have to trust in something - your gut, destiny, life, karma,
