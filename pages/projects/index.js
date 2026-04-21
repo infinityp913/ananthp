@@ -182,6 +182,13 @@ const projects = [
     link: "https://devpost.com/software/trashcan-finder",
   },
   {
+    title: "Induino Ultrasonic Distance Measurer",
+    year: 2012,
+    description:
+      "Built on Induino — a low-cost, Indian alternative to Arduino. An ultrasonic sensor fires sound waves and measures the distance to the nearest object by timing how long the echo takes to return, using the speed of sound to convert time into distance.",
+    tech: ["Induino", "C++", "Ultrasonic Sensor", "Embedded Systems"],
+  },
+  {
     title: "VR Headset for Education",
     year: 2019,
     description:
