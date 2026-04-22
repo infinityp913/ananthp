@@ -12,6 +12,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "Street Image Stitcher",
+    year: 2026,
+    description:
+      "A web app that stitches Google Street View screenshots into a full-width street elevation panorama. Iteratively worked through 14 stitching approaches — from Gemini-based seam blending (abandoned: hard output resolution cap at ~2048px) to a pure PIL pipeline with median luminance normalization and 400px sigmoid cross-fade blends. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend, and Vercel Blob for storage.",
+    tech: ["Next.js", "FastAPI", "Python", "PIL", "NumPy", "Vercel Blob"],
+    link: "https://github.com/infinityp913/street-image-stitcher",
+  },
+  {
     title: "I-JEPA",
     year: 2026,
     description: (
