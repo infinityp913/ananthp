@@ -12,6 +12,33 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "AppFiller",
+    year: 2026,
+    description: (
+      <>
+        A browser extension that fills job and accelerator applications using
+        your profile and Claude AI. Bring you own Claude API Key, add your profile once, fill any form in
+        seconds. Detects text inputs, textareas, selects, contenteditable,
+        shadow DOM, and cross-origin iframes across two modes: Job (personal
+        profile) and Accelerator (personal + startup profile). The content
+        script scans every frame for fillable fields, infers labels and
+        character limits, and returns them to the background script. The
+        background sends each field to Claude with your profile as context,
+        then writes answers back using native input setters so React, Vue, and
+        other frameworks register changes correctly.
+      </>
+    ),
+    tech: [
+      "TypeScript",
+      "Safari",
+      "Chrome",
+      "Claude Opus 4.7",
+      "Anthropic API",
+      "Bun",
+    ],
+    link: "https://github.com/infinityp913/application-filler",
+  },
+  {
     title: "TARP Photogrammetry & Volumetrics Dashboard",
     year: 2026,
     description: (
