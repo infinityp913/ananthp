@@ -12,6 +12,40 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "TARP Photogrammetry & Volumetrics Dashboard",
+    year: 2026,
+    description: (
+      <>
+        A localhost kanban dashboard for managing the photogrammetry and
+        volumetrics pipeline at the{" "}
+        <a
+          href="https://air.ht.lu.se/s/tharros/page/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          Tharros Archaeological Research Project
+        </a>{" "}
+        in Sardinia, Italy. Tracks jobs across five filesystem-backed pipeline
+        stages (To Be Processed → Uploaded to AIR) and SU volumetric records
+        across four stages, with drag-and-drop kanban cards and real-time Google
+        Sheets sync. The sheet uses checkbox columns for pipeline milestones and
+        auto-derives stage from the checkbox state. FastAPI backend scans the
+        photogrammetry folder structure directly; React frontend with dnd-kit.
+      </>
+    ),
+    tech: [
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Google Sheets API",
+      "dnd-kit",
+      "Vite",
+    ],
+    link: "https://github.com/infinityp913/tarp-photogrammetry-volumetrics-dashboard",
+  },
+  {
     title: "Street Image Stitcher",
     year: 2026,
     description:
