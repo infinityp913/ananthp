@@ -10,8 +10,9 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 const currentlyReading = [
-  { title: "Dune", author: "Frank Herbert" },
-  { title: "11/22/63", author: "Stephen King" },
+  { title: "Ingenuity Gap", author: "Thomas Homer-Dixon" },
+  { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee" },
+  { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee" },
 ];
 
 const books = [
