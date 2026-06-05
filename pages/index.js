@@ -41,9 +41,9 @@ export default function Home() {
             </h1>
             <div className="text-md mt-8 sm:max-w-[460px] space-y-3">
               <p className="mb-8">Founder, ML engineer, AI systems builder.</p>
-              <p>Knew we&apos;d found <span className="bg-amber-400/30 px-0.5 rounded-sm">product market fit</span> when students tried card after card, borrowed from their parents, just to pay when our checkout broke.</p>
-              <p>Most engineers don&apos;t spend two summers on a Mediterranean dig site. At Tharros, a Roman-Carthaginian city in Sardinia, I automated 3D models and volumetric calculations for <span className="bg-amber-400/30 px-0.5 rounded-sm">a 2,000-year-old market district and burial ground</span>.</p>
-              <p>All four years of college and beyond, I built web and data systems to <span className="bg-amber-400/30 px-0.5 rounded-sm">make ancient Pompeii research more accessible</span>.</p>
+              <p>Knew we&apos;d found <span>product market fit</span> when students tried card after card, borrowed from their parents, just to pay when our checkout broke.</p>
+              <p>Most engineers don&apos;t spend two summers on a Mediterranean dig site. At Tharros, a Roman-Carthaginian city in Sardinia, I automated 3D models and volumetric calculations for <span>a 2,000-year-old market district and burial ground</span>.</p>
+              <p>All four years of college and beyond, I built web and data systems to <span>make ancient Pompeii research more accessible</span>.</p>
             </div>
             <div className="flex items-center mt-8 space-x-5 text-neutral-500">
               <a

@@ -12,7 +12,6 @@ const libreBaskerville = Libre_Baskerville({
 const currentlyReading = [
   { title: "Ingenuity Gap", author: "Thomas Homer-Dixon" },
   { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee" },
-  { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee" },
 ];
 
 const books = [
