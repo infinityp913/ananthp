@@ -31,24 +31,14 @@ describe('BooksPage — currently reading', () => {
     expect(screen.getByText(/currently reading/i)).toBeInTheDocument();
   });
 
-  it('"Dune" renders in currently reading without a star rating', () => {
+  it('"Ingenuity Gap" renders in currently reading without a star rating', () => {
     render(<BooksPage />);
-    expect(screen.getByText('Dune')).toBeInTheDocument();
+    expect(screen.getByText('Ingenuity Gap')).toBeInTheDocument();
   });
 
-  it('"11/22/63" renders in currently reading without a star rating', () => {
+  it('"Thomas Homer-Dixon" renders as author', () => {
     render(<BooksPage />);
-    expect(screen.getByText('11/22/63')).toBeInTheDocument();
-  });
-
-  it('"Frank Herbert" renders as author', () => {
-    render(<BooksPage />);
-    expect(screen.getByText('Frank Herbert')).toBeInTheDocument();
-  });
-
-  it('"Stephen King" renders as author', () => {
-    render(<BooksPage />);
-    expect(screen.getByText('Stephen King')).toBeInTheDocument();
+    expect(screen.getByText('Thomas Homer-Dixon')).toBeInTheDocument();
   });
 });
 
