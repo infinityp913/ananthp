@@ -1,7 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { groupByYear } from "@/lib/groupByYear";
 
 const libreBaskerville = Libre_Baskerville({
@@ -12,20 +13,41 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "Pomelo",
+    year: 2026,
+    description:
+      "An AI-native personalized course platform: it maps what a professional already knows, then generates a structured course around the specific gap — not a MOOC catalog, not an AI chat tool. A 5-question qualifying chat identifies background and target gap, Claude generates a tailored chapter plan, and each chapter is generated on demand with formatted text, typeset LaTeX math, cards, callouts, and optional video enrichment, plus a persistent per-chapter Q&A chat. Built with my brother Sid.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Claude API",
+      "Tailwind CSS",
+      "KaTeX",
+    ],
+    link: "https://learnpomelo.com",
+    image: {
+      src: "/projects/pomelo.png",
+      alt: "A Pomelo chapter on RAG chunking strategies, with an embedded YouTube video enrichment and a per-chapter Q&A chat panel on the right",
+      width: 1200,
+      height: 653,
+    },
+  },
+  {
     title: "AppFiller",
     year: 2026,
     description: (
       <>
         A browser extension that fills job and accelerator applications using
-        your profile and Claude AI. Bring you own Claude API Key, add your profile once, fill any form in
-        seconds. Detects text inputs, textareas, selects, contenteditable,
-        shadow DOM, and cross-origin iframes across two modes: Job (personal
-        profile) and Accelerator (personal + startup profile). The content
-        script scans every frame for fillable fields, infers labels and
-        character limits, and returns them to the background script. The
-        background sends each field to Claude with your profile as context,
-        then writes answers back using native input setters so React, Vue, and
-        other frameworks register changes correctly.
+        your profile and Claude AI. Bring you own Claude API Key, add your
+        profile once, fill any form in seconds. Detects text inputs, textareas,
+        selects, contenteditable, shadow DOM, and cross-origin iframes across
+        two modes: Job (personal profile) and Accelerator (personal + startup
+        profile). The content script scans every frame for fillable fields,
+        infers labels and character limits, and returns them to the background
+        script. The background sends each field to Claude with your profile as
+        context, then writes answers back using native input setters so React,
+        Vue, and other frameworks register changes correctly.
       </>
     ),
     tech: [
@@ -71,6 +93,58 @@ const projects = [
       "Vite",
     ],
     link: "https://github.com/infinityp913/tarp-photogrammetry-volumetrics-dashboard",
+    pipeline: {
+      caption: "Raw field photo to publication-ready SU sheet PDF",
+      steps: [
+        {
+          step: "01",
+          label: "Field capture",
+          caption: "Drone photos and GCP markers on site at Tharros, Sardinia.",
+          image: {
+            src: "/projects/tarp-pipeline-01-field-capture.webp",
+            alt: "Archaeologists excavating a trench at the Tharros dig site in Sardinia, with GCP marker balls placed around the trench",
+            width: 828,
+            height: 1104,
+          },
+        },
+        {
+          step: "02",
+          label: "Dashboard",
+          caption:
+            "The TARP Lab dashboard converts field photos into 3D models and SU documentation for each excavated unit.",
+          image: {
+            src: "/projects/tarp-pipeline-02-dashboard.webp",
+            alt: "TARP Lab kanban dashboard showing photogrammetry jobs sorted into pipeline-stage columns",
+            width: 828,
+            height: 548,
+          },
+        },
+        {
+          step: "03",
+          label: "3D volume model",
+          caption:
+            "Poisson-reconstructed OBJ mesh with 3D and 2.5D volumes (1.1M vertices).",
+          image: {
+            src: "/projects/tarp-pipeline-03-3d-model.webp",
+            alt: "Poisson-reconstructed 3D mesh of an excavated trench viewed in a modeling application, showing 1.1 million vertices",
+            width: 828,
+            height: 572,
+          },
+        },
+        {
+          step: "04",
+          label: "SU sheet PDF",
+          caption:
+            "Georeferenced orthophoto, DEM, and site context map, publication ready.",
+          image: {
+            src: "/projects/tarp-pipeline-04-su-sheet.webp",
+            alt: "Publication-ready SU sheet PDF for Tharros Trench 17000, showing an orthophoto, digital elevation model, and site context map",
+            width: 828,
+            height: 493,
+          },
+        },
+      ],
+    },
   },
   {
     title: "Street Image Stitcher",
@@ -79,6 +153,12 @@ const projects = [
       "A web app that stitches Google Street View screenshots into a full-width street elevation panorama. Iteratively worked through 14 stitching approaches — from Gemini-based seam blending (abandoned: hard output resolution cap at ~2048px) to a pure PIL pipeline with median luminance normalization and 400px sigmoid cross-fade blends. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend, and Vercel Blob for storage.",
     tech: ["Next.js", "FastAPI", "Python", "PIL", "NumPy", "Vercel Blob"],
     link: "https://github.com/infinityp913/street-image-stitcher",
+    image: {
+      src: "/projects/street-stitcher.jpg",
+      alt: "A stitched street elevation panorama of storefronts, produced from Google Street View screenshots",
+      width: 1600,
+      height: 142,
+    },
   },
   {
     title: "I-JEPA",
@@ -119,6 +199,12 @@ const projects = [
       "ReportLab",
     ],
     link: "https://github.com/sid0913/agentic-gis",
+    image: {
+      src: "/projects/agentic-gis.png",
+      alt: "Auto-generated bike lane cross-section diagram showing sidewalk, raised bike lane, flex-post separator, and travel lane widths",
+      width: 1600,
+      height: 226,
+    },
   },
   {
     title: "HabitTracker",
@@ -127,6 +213,12 @@ const projects = [
       "A minimal iPhone habit tracker with a home screen widget. Track one habit, see your streak — that's it. Built with Swift and WidgetKit: a small widget shows the streak count, a medium widget has interactive check/X buttons via AppIntents. Daily notifications with inline actions, a configurable start date to preserve existing streaks, and all data stored in a shared App Group so the widget and app stay in sync.",
     tech: ["Swift", "SwiftUI", "WidgetKit", "AppIntents", "iOS 17"],
     link: "https://github.com/infinityp913/habit-tracker",
+    image: {
+      src: "/projects/habit-tracker.png",
+      alt: "HabitTracker home screen showing a 9-day streak for \"Avoid social media\" with Done and Missed buttons",
+      width: 700,
+      height: 1516,
+    },
   },
   {
     title: "Personal Website",
@@ -144,9 +236,9 @@ const projects = [
         Built in Sardinia, Italy as part of the Tharros Archaeological Research
         project. A script to automate volumetric generation for excavated
         stratigraphic units (SUs) using CloudCompare processes, producing 3D
-        objects viewable from all angles for post-excavation analysis and
-        record keeping. Collaborated with the University of Cincinnati. Output
-        is archived on{" "}
+        objects viewable from all angles for post-excavation analysis and record
+        keeping. Collaborated with the University of Cincinnati. Output is
+        archived on{" "}
         <a
           href="https://air.ht.lu.se/s/tharros/page/home"
           target="_blank"
@@ -187,6 +279,12 @@ const projects = [
       "LLM",
     ],
     link: "https://github.com/a13m-matherium/ria-voice-website",
+    image: {
+      src: "/projects/ria-voice.png",
+      alt: "Ria Voice's Documents dashboard listing uploaded PDFs the voice agent can reference",
+      width: 1400,
+      height: 524,
+    },
   },
   {
     title: "AI Avatars for Customer Service",
@@ -202,6 +300,12 @@ const projects = [
       "A map-based exploration of the artistic and geographical history of Pompeii. Built in collaboration with Dr. Eric Poehler (UMass Amherst) and Sebastian Heath (NYU) to visualize PALP's archaeological data.",
     tech: ["Gatsby", "React", "Node.js", "NLP"],
     link: "https://palp-art.netlify.app/start/",
+    image: {
+      src: "/projects/palp.png",
+      alt: "PALP's interactive map of Pompeii artwork findspots alongside a gallery of fresco photographs",
+      width: 1200,
+      height: 916,
+    },
   },
   {
     title: "GPU Server",
@@ -233,6 +337,12 @@ const projects = [
       "A web app that uses your camera to capture hard-to-read text and reads it back to you aloud. Designed to be simple — ideal for the elderly, visually impaired, and those with reading difficulties.",
     tech: ["JavaScript", "OCR", "Text-to-Speech", "Camera API"],
     link: "https://github.com/infinityp913/Readable",
+    image: {
+      src: "/projects/readable.jpg",
+      alt: "Readable capturing a page of book text with a phone camera to read it aloud",
+      width: 1200,
+      height: 675,
+    },
   },
   {
     title: "TampAlert!",
@@ -273,6 +383,13 @@ const projects = [
   },
 ];
 
+function slugify(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 function linkLabel(href) {
   if (!href) return "Open ↗︎";
   if (href.includes("github.com")) return "GitHub ↗︎";
@@ -285,6 +402,11 @@ const flatProjects = yearGroups.flatMap((g) => g.projects);
 
 export default function ProjectsPage() {
   const cardRefs = useRef([]);
+  const [expandedImages, setExpandedImages] = useState({});
+
+  function toggleImage(title) {
+    setExpandedImages((prev) => ({ ...prev, [title]: !prev[title] }));
+  }
 
   useEffect(() => {
     document.body.classList.add("js-animations");
@@ -405,6 +527,102 @@ export default function ProjectsPage() {
                                 </span>
                               ))}
                             </div>
+                            {project.image &&
+                              (() => {
+                                const imageId = `project-image-${slugify(project.title)}`;
+                                const isOpen = !!expandedImages[project.title];
+                                return (
+                                  <>
+                                    <button
+                                      type="button"
+                                      onClick={() => toggleImage(project.title)}
+                                      aria-expanded={isOpen}
+                                      aria-controls={imageId}
+                                      className="mt-3 text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                                    >
+                                      {isOpen ? "Hide screenshot" : "Show screenshot"}{" "}
+                                      {isOpen ? "▲" : "▼"}
+                                    </button>
+                                    {isOpen && (
+                                      <div
+                                        id={imageId}
+                                        className="mt-3 rounded border border-neutral-800 bg-neutral-900 p-2 project-image-reveal"
+                                      >
+                                        <Image
+                                          src={project.image.src}
+                                          alt={project.image.alt}
+                                          width={project.image.width}
+                                          height={project.image.height}
+                                          sizes="(min-width: 672px) 640px, 100vw"
+                                          className="w-full h-auto max-h-[420px] object-contain rounded"
+                                        />
+                                      </div>
+                                    )}
+                                  </>
+                                );
+                              })()}
+                            {project.pipeline &&
+                              (() => {
+                                const imageId = `project-pipeline-${slugify(project.title)}`;
+                                const isOpen = !!expandedImages[project.title];
+                                return (
+                                  <>
+                                    <button
+                                      type="button"
+                                      onClick={() => toggleImage(project.title)}
+                                      aria-expanded={isOpen}
+                                      aria-controls={imageId}
+                                      className="mt-3 text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                                    >
+                                      {isOpen ? "Hide pipeline" : "Show pipeline"}{" "}
+                                      {isOpen ? "▲" : "▼"}
+                                    </button>
+                                    {isOpen && (
+                                      <div
+                                        id={imageId}
+                                        className="mt-3 rounded border border-neutral-800 bg-neutral-900 p-3 project-image-reveal"
+                                      >
+                                        <p className="text-[10px] tracking-widest text-neutral-600 uppercase mb-3">
+                                          {project.pipeline.caption}
+                                        </p>
+                                        <div className="flex items-start gap-3 overflow-x-auto pb-1">
+                                          {project.pipeline.steps.map((step, i) => (
+                                            <div
+                                              key={step.label}
+                                              className="flex items-start flex-shrink-0"
+                                            >
+                                              {i > 0 && (
+                                                <span
+                                                  aria-hidden="true"
+                                                  className="mt-12 sm:mt-14 mr-3 flex-shrink-0 text-neutral-700"
+                                                >
+                                                  →
+                                                </span>
+                                              )}
+                                              <div className="w-32 sm:w-36 flex-shrink-0">
+                                                <Image
+                                                  src={step.image.src}
+                                                  alt={step.image.alt}
+                                                  width={step.image.width}
+                                                  height={step.image.height}
+                                                  sizes="144px"
+                                                  className="h-24 sm:h-28 w-full object-cover rounded border border-neutral-800"
+                                                />
+                                                <p className="mt-2 text-[10px] tracking-widest text-neutral-500">
+                                                  {step.step} · {step.label}
+                                                </p>
+                                                <p className="mt-1 text-xs text-neutral-400 leading-relaxed">
+                                                  {step.caption}
+                                                </p>
+                                              </div>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    )}
+                                  </>
+                                );
+                              })()}
                           </div>
                         </div>
                       );

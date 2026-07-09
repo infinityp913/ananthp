@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, within, fireEvent } from '@testing-library/react';
 import ProjectsPage from '@/pages/projects/index';
 
 jest.mock('next/router', () => ({
@@ -138,5 +138,118 @@ describe('ProjectsPage — Navbar order', () => {
     const workIdx = navTexts.indexOf('work');
     expect(homeIdx).toBeLessThan(projectsIdx);
     expect(projectsIdx).toBeLessThan(workIdx);
+  });
+});
+
+describe('ProjectsPage — project screenshots', () => {
+  it('shows a screenshot toggle button only for projects that have an image', () => {
+    render(<ProjectsPage />);
+
+    // Pomelo has a screenshot
+    const pomeloCard = screen.getByText('Pomelo').closest('.project-card');
+    expect(within(pomeloCard).getByRole('button', { name: /screenshot/i })).toBeInTheDocument();
+
+    // GPU Server has no image
+    const gpuCard = screen.getByText('GPU Server').closest('.project-card');
+    expect(within(gpuCard).queryByRole('button', { name: /screenshot/i })).toBeNull();
+  });
+
+  it('image is not rendered until the toggle is clicked, and hides again on second click', () => {
+    render(<ProjectsPage />);
+
+    const pomeloCard = screen.getByText('Pomelo').closest('.project-card');
+    expect(within(pomeloCard).queryByRole('img')).toBeNull();
+
+    const toggle = within(pomeloCard).getByRole('button', { name: /screenshot/i });
+    fireEvent.click(toggle);
+    expect(within(pomeloCard).getByRole('img')).toBeInTheDocument();
+
+    fireEvent.click(toggle);
+    expect(within(pomeloCard).queryByRole('img')).toBeNull();
+  });
+
+  it('revealed image has non-empty, descriptive alt text', () => {
+    render(<ProjectsPage />);
+
+    const pomeloCard = screen.getByText('Pomelo').closest('.project-card');
+    const toggle = within(pomeloCard).getByRole('button', { name: /screenshot/i });
+    fireEvent.click(toggle);
+
+    const img = within(pomeloCard).getByRole('img');
+    expect(img.getAttribute('alt')).toBeTruthy();
+    expect(img.getAttribute('alt').length).toBeGreaterThan(5);
+  });
+
+  it('toggle button reflects state via aria-expanded', () => {
+    render(<ProjectsPage />);
+
+    const pomeloCard = screen.getByText('Pomelo').closest('.project-card');
+    const toggle = within(pomeloCard).getByRole('button', { name: /screenshot/i });
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('expanding one project image does not reveal another project image', () => {
+    render(<ProjectsPage />);
+
+    const pomeloCard = screen.getByText('Pomelo').closest('.project-card');
+    const habitCard = screen.getByText('HabitTracker').closest('.project-card');
+
+    const pomeloToggle = within(pomeloCard).getByRole('button', { name: /screenshot/i });
+    fireEvent.click(pomeloToggle);
+
+    expect(within(pomeloCard).getByRole('img')).toBeInTheDocument();
+    expect(within(habitCard).queryByRole('img')).toBeNull();
+  });
+});
+
+describe('ProjectsPage — TARP pipeline visualization', () => {
+  function getTarpCard() {
+    return screen
+      .getByText('TARP Photogrammetry & Volumetrics Dashboard')
+      .closest('.project-card');
+  }
+
+  it('shows a "Show pipeline" toggle instead of a screenshot toggle', () => {
+    render(<ProjectsPage />);
+
+    const tarpCard = getTarpCard();
+    expect(within(tarpCard).getByRole('button', { name: /pipeline/i })).toBeInTheDocument();
+    expect(within(tarpCard).queryByRole('button', { name: /^show screenshot/i })).toBeNull();
+  });
+
+  it('reveals four pipeline step images with descriptive alt text when toggled', () => {
+    render(<ProjectsPage />);
+
+    const tarpCard = getTarpCard();
+    expect(within(tarpCard).queryAllByRole('img')).toHaveLength(0);
+
+    const toggle = within(tarpCard).getByRole('button', { name: /pipeline/i });
+    fireEvent.click(toggle);
+
+    const images = within(tarpCard).getAllByRole('img');
+    expect(images).toHaveLength(4);
+    images.forEach((img) => {
+      expect(img.getAttribute('alt')).toBeTruthy();
+      expect(img.getAttribute('alt').length).toBeGreaterThan(5);
+    });
+  });
+
+  it('pipeline toggle reflects state via aria-expanded and hides on second click', () => {
+    render(<ProjectsPage />);
+
+    const tarpCard = getTarpCard();
+    const toggle = within(tarpCard).getByRole('button', { name: /pipeline/i });
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    expect(within(tarpCard).getAllByRole('img')).toHaveLength(4);
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(within(tarpCard).queryAllByRole('img')).toHaveLength(0);
   });
 });
