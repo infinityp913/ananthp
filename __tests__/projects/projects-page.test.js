@@ -205,10 +205,51 @@ describe('ProjectsPage — project screenshots', () => {
   });
 });
 
+describe('ProjectsPage — Street Image Stitcher', () => {
+  it('description opens by framing the tool for urban planners', () => {
+    render(<ProjectsPage />);
+
+    const card = screen
+      .getByText('Street Image Stitcher')
+      .closest('.project-card');
+    const description = within(card).getByText(/Built for urban planners/i);
+    expect(description.textContent.startsWith('Built for urban planners')).toBe(true);
+    expect(description.textContent).toMatch(/inception report/i);
+    expect(description.textContent).toMatch(/Mumbai/i);
+    expect(description.textContent).toMatch(/Boston/i);
+  });
+});
+
+describe('ProjectsPage — TARP Lab and TARP Field', () => {
+  it('renders TARP Lab and TARP Field as separate cards, each with a GitHub link', () => {
+    render(<ProjectsPage />);
+
+    const labCard = screen
+      .getAllByText('TARP Lab')
+      .find((el) => el.tagName === 'SPAN')
+      .closest('.project-card');
+    const fieldCard = screen
+      .getAllByText('TARP Field')
+      .find((el) => el.tagName === 'SPAN')
+      .closest('.project-card');
+    expect(labCard).not.toBe(fieldCard);
+
+    expect(within(labCard).getByText('GitHub ↗︎')).toHaveAttribute(
+      'href',
+      'https://github.com/infinityp913/tarp-lab',
+    );
+    expect(within(fieldCard).getByText('GitHub ↗︎')).toHaveAttribute(
+      'href',
+      'https://github.com/infinityp913/tarp-field',
+    );
+  });
+});
+
 describe('ProjectsPage — TARP pipeline visualization', () => {
   function getTarpCard() {
     return screen
-      .getByText('TARP Photogrammetry & Volumetrics Dashboard')
+      .getAllByText('TARP Lab')
+      .find((el) => el.tagName === 'SPAN')
       .closest('.project-card');
   }
 

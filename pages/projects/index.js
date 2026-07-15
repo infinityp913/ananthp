@@ -34,39 +34,13 @@ const projects = [
     },
   },
   {
-    title: "AppFiller",
+    title: "TARP Field",
     year: 2026,
     description: (
       <>
-        A browser extension that fills job and accelerator applications using
-        your profile and Claude AI. Bring you own Claude API Key, add your
-        profile once, fill any form in seconds. Detects text inputs, textareas,
-        selects, contenteditable, shadow DOM, and cross-origin iframes across
-        two modes: Job (personal profile) and Accelerator (personal + startup
-        profile). The content script scans every frame for fillable fields,
-        infers labels and character limits, and returns them to the background
-        script. The background sends each field to Claude with your profile as
-        context, then writes answers back using native input setters so React,
-        Vue, and other frameworks register changes correctly.
-      </>
-    ),
-    tech: [
-      "TypeScript",
-      "Safari",
-      "Chrome",
-      "Claude Opus 4.7",
-      "Anthropic API",
-      "Bun",
-    ],
-    link: "https://github.com/infinityp913/application-filler",
-  },
-  {
-    title: "TARP Photogrammetry & Volumetrics Dashboard",
-    year: 2026,
-    description: (
-      <>
-        A localhost kanban dashboard for managing the photogrammetry and
-        volumetrics pipeline at the{" "}
+        The field half of a two-repo automation pipeline that lets a
+        nontechnical archaeologist go from raw SU photos to finished 3D models
+        and SU research sheets, built for the{" "}
         <a
           href="https://air.ht.lu.se/s/tharros/page/home"
           target="_blank"
@@ -75,12 +49,21 @@ const projects = [
         >
           Tharros Archaeological Research Project
         </a>{" "}
-        in Sardinia, Italy. Tracks jobs across five filesystem-backed pipeline
-        stages (To Be Processed → Uploaded to AIR) and SU volumetric records
-        across four stages, with drag-and-drop kanban cards and real-time Google
-        Sheets sync. The sheet uses checkbox columns for pipeline milestones and
-        auto-derives stage from the checkbox state. FastAPI backend scans the
-        photogrammetry folder structure directly; React frontend with dnd-kit.
+        in Sardinia, Italy. An automation pipeline styled as a kanban board that
+        runs on the on-site machine, tracking each drone photo job through raw
+        capture, preliminary Metashape alignment, and transport to the lab.
+        Auto-pushes job status to Google Sheets every five minutes so the field
+        team and the{" "}
+        <a
+          href="https://github.com/infinityp913/tarp-lab"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          TARP Lab
+        </a>{" "}
+        dashboard stay in sync, and flags misnamed job folders with a warning
+        banner so nothing goes missing before handoff.
       </>
     ),
     tech: [
@@ -92,7 +75,56 @@ const projects = [
       "dnd-kit",
       "Vite",
     ],
-    link: "https://github.com/infinityp913/tarp-photogrammetry-volumetrics-dashboard",
+    link: "https://github.com/infinityp913/tarp-field",
+  },
+  {
+    title: "TARP Lab",
+    year: 2026,
+    description: (
+      <>
+        The lab half of a two-repo automation pipeline that lets a nontechnical
+        archaeologist go from raw SU photos to finished 3D models and SU
+        research sheets, built for the{" "}
+        <a
+          href="https://air.ht.lu.se/s/tharros/page/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          Tharros Archaeological Research Project
+        </a>{" "}
+        in Sardinia, Italy. An automation pipeline styled as a kanban board
+        that takes over once photos arrive from{" "}
+        <a
+          href="https://github.com/infinityp913/tarp-field"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-neutral-300 transition-colors"
+        >
+          TARP Field
+        </a>
+        , driving jobs across five filesystem-backed pipeline stages (To Be
+        Processed → Uploaded to AIR) and each stratigraphic unit through its own
+        volumetrics pipeline (pre-snip → snip → post-snip → volume → SU sheet).
+        Every heavy step — Metashape alignment, Poisson mesh reconstruction with
+        CloudComPy, and georeferenced SU sheet PDF generation in QGIS — runs at
+        the click of a kanban card button, so no command-line or GIS expertise
+        is required on site. Syncs with Google Sheets so the Field and Lab
+        machines share one source of truth.
+      </>
+    ),
+    tech: [
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "CloudComPy",
+      "QGIS",
+      "Google Sheets API",
+      "dnd-kit",
+      "Vite",
+    ],
+    link: "https://github.com/infinityp913/tarp-lab",
     pipeline: {
       caption: "Raw field photo to publication-ready SU sheet PDF",
       steps: [
@@ -150,7 +182,7 @@ const projects = [
     title: "Street Image Stitcher",
     year: 2026,
     description:
-      "A web app that stitches Google Street View screenshots into a full-width street elevation panorama. Iteratively worked through 14 stitching approaches — from Gemini-based seam blending (abandoned: hard output resolution cap at ~2048px) to a pure PIL pipeline with median luminance normalization and 400px sigmoid cross-fade blends. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend, and Vercel Blob for storage.",
+      "Built for urban planners, to automate a step in building inception reports: a web app that stitches Google Street View screenshots into a full-width street elevation panorama. Ideated out of conversations with urban planners in Mumbai and Boston. Iteratively worked through 14 stitching approaches — from Gemini-based seam blending (abandoned: hard output resolution cap at ~2048px) to a pure PIL pipeline with median luminance normalization and 400px sigmoid cross-fade blends. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend, and Vercel Blob for storage.",
     tech: ["Next.js", "FastAPI", "Python", "PIL", "NumPy", "Vercel Blob"],
     link: "https://github.com/infinityp913/street-image-stitcher",
     image: {
@@ -186,6 +218,33 @@ const projects = [
     link: "https://github.com/infinityp913/i-jepa",
   },
   {
+    title: "AppFiller",
+    year: 2026,
+    description: (
+      <>
+        A browser extension that fills job and accelerator applications using
+        your profile and Claude AI. Bring you own Claude API Key, add your
+        profile once, fill any form in seconds. Detects text inputs, textareas,
+        selects, contenteditable, shadow DOM, and cross-origin iframes across
+        two modes: Job (personal profile) and Accelerator (personal + startup
+        profile). The content script scans every frame for fillable fields,
+        infers labels and character limits, and returns them to the background
+        script. The background sends each field to Claude with your profile as
+        context, then writes answers back using native input setters so React,
+        Vue, and other frameworks register changes correctly.
+      </>
+    ),
+    tech: [
+      "TypeScript",
+      "Safari",
+      "Chrome",
+      "Claude Opus 4.7",
+      "Anthropic API",
+      "Bun",
+    ],
+    link: "https://github.com/infinityp913/application-filler",
+  },
+  {
     title: "Agentic GIS",
     year: 2026,
     description:
@@ -215,7 +274,7 @@ const projects = [
     link: "https://github.com/infinityp913/habit-tracker",
     image: {
       src: "/projects/habit-tracker.png",
-      alt: "HabitTracker home screen showing a 9-day streak for \"Avoid social media\" with Done and Missed buttons",
+      alt: 'HabitTracker home screen showing a 9-day streak for "Avoid social media" with Done and Missed buttons',
       width: 700,
       height: 1516,
     },
@@ -252,7 +311,7 @@ const projects = [
       </>
     ),
     tech: ["Python", "CloudCompare", "3D Volumetrics", "Archaeology"],
-    link: "https://github.com/garygao333/cloudcomparescript",
+    link: "https://github.com/infinityp913/cloudcomparescript",
   },
   {
     title: "Real-Time WebRTC Audio Routing Server for Voice Agents",
