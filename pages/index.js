@@ -40,10 +40,22 @@ export default function Home() {
               Ananth Preetham
             </h1>
             <div className="text-md mt-8 sm:max-w-[460px] space-y-3">
-              <p className="mb-8">Founder, ML engineer, AI systems builder.</p>
-              <p>Knew we&apos;d found <span>product market fit</span> when students tried card after card, borrowed from their parents, just to pay when our checkout broke.</p>
-              <p>Most engineers don&apos;t spend two summers on a Mediterranean dig site. At Tharros, a Roman-Carthaginian city in Sardinia, I automated 3D models and volumetric calculations for <span>a 2,000-year-old market district and burial ground</span>.</p>
-              <p>All four years of college and beyond, I built web and data systems to <span>make ancient Pompeii research more accessible</span>.</p>
+              <p className="mb-8">Founder, ML engineer, professional rabbit-holer.</p>
+              <p>Built an AI voice agent for F1 visa interview prep that grew to <span>7,000 users</span>. Knew it had legs the day our checkout broke and students started swiping every card in their wallet rather than give up.</p>
+              <p>Spent two summers digging at a Roman-Carthaginian site in Sardinia, then automated the boring part: pipelines that turn a dig site into <span>3D models of stratigraphic units</span>.</p>
+              <p>Off the clock: chasing redwoods and sequoias, 1-2 day backpacking trips wherever the flight is cheapest, keeping a running list of local foods to try everywhere I go, and being insufferably picky about movies and TV (3.7 on Letterboxd, 8.0 on IMDb, no exceptions).</p>
+              <div className="mt-6">
+                <Image
+                  alt="Ananth holding a tray of grilled short ribs at a street food festival"
+                  src="/food-festival.jpg"
+                  width={692}
+                  height={1134}
+                  className="rounded-lg w-full max-w-[280px] h-auto"
+                />
+                <p className="text-xs text-neutral-600 mt-2">
+                  Field research for the food list.
+                </p>
+              </div>
             </div>
             <div className="flex items-center mt-8 space-x-5 text-neutral-500">
               <a
