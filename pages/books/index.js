@@ -11,6 +11,7 @@ const libreBaskerville = Libre_Baskerville({
 
 const currentlyReading = [
   { title: "Ingenuity Gap", author: "Thomas Homer-Dixon" },
+  { title: "Consider Phlebas", author: "Iain M. Banks" },
 ];
 
 const books = [

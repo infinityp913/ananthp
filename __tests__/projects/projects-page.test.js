@@ -206,14 +206,13 @@ describe('ProjectsPage — project screenshots', () => {
 });
 
 describe('ProjectsPage — Street Image Stitcher', () => {
-  it('description opens by framing the tool for urban planners', () => {
+  it('description frames the tool for urban planners', () => {
     render(<ProjectsPage />);
 
     const card = screen
       .getByText('Street Image Stitcher')
       .closest('.project-card');
-    const description = within(card).getByText(/Built for urban planners/i);
-    expect(description.textContent.startsWith('Built for urban planners')).toBe(true);
+    const description = within(card).getByText(/urban planners/i);
     expect(description.textContent).toMatch(/inception report/i);
     expect(description.textContent).toMatch(/Mumbai/i);
     expect(description.textContent).toMatch(/Boston/i);

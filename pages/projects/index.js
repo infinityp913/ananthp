@@ -16,7 +16,7 @@ const projects = [
     title: "Pomelo",
     year: 2026,
     description:
-      "An AI-native personalized course platform: it maps what a professional already knows, then generates a structured course around the specific gap — not a MOOC catalog, not an AI chat tool. A 5-question qualifying chat identifies background and target gap, Claude generates a tailored chapter plan, and each chapter is generated on demand with formatted text, typeset LaTeX math, cards, callouts, and optional video enrichment, plus a persistent per-chapter Q&A chat. Built with my brother Sid.",
+      "AI-generated courses built around what you already know, not a MOOC catalog or a chat tool. A short qualifying chat identifies your background and target gap, Claude drafts a tailored chapter plan, and each chapter is generated on demand with formatted text, typeset LaTeX math, and optional video, plus a persistent per-chapter Q&A chat. Built with my brother Sid.",
     tech: [
       "Next.js",
       "TypeScript",
@@ -38,9 +38,9 @@ const projects = [
     year: 2026,
     description: (
       <>
-        The field half of a two-repo automation pipeline that lets a
-        nontechnical archaeologist go from raw SU photos to finished 3D models
-        and SU research sheets, built for the{" "}
+        One of two repos powering an automation pipeline that lets
+        nontechnical archaeologists turn raw drone photos into 3D models and
+        research sheets, built for the{" "}
         <a
           href="https://air.ht.lu.se/s/tharros/page/home"
           target="_blank"
@@ -49,11 +49,10 @@ const projects = [
         >
           Tharros Archaeological Research Project
         </a>{" "}
-        in Sardinia, Italy. An automation pipeline styled as a kanban board that
-        runs on the on-site machine, tracking each drone photo job through raw
-        capture, preliminary Metashape alignment, and transport to the lab.
-        Auto-pushes job status to Google Sheets every five minutes so the field
-        team and the{" "}
+        in Sardinia, Italy. TARP Field runs on-site: a kanban-style dashboard
+        tracks each photo job from capture through preliminary Metashape
+        alignment and handoff to the lab. Job status pushes to Google Sheets
+        every 5 minutes to stay in sync with{" "}
         <a
           href="https://github.com/infinityp913/tarp-lab"
           target="_blank"
@@ -61,9 +60,8 @@ const projects = [
           className="underline hover:text-neutral-300 transition-colors"
         >
           TARP Lab
-        </a>{" "}
-        dashboard stay in sync, and flags misnamed job folders with a warning
-        banner so nothing goes missing before handoff.
+        </a>
+        , and misnamed job folders get flagged before anything goes missing.
       </>
     ),
     tech: [
@@ -82,19 +80,7 @@ const projects = [
     year: 2026,
     description: (
       <>
-        The lab half of a two-repo automation pipeline that lets a nontechnical
-        archaeologist go from raw SU photos to finished 3D models and SU
-        research sheets, built for the{" "}
-        <a
-          href="https://air.ht.lu.se/s/tharros/page/home"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-neutral-300 transition-colors"
-        >
-          Tharros Archaeological Research Project
-        </a>{" "}
-        in Sardinia, Italy. An automation pipeline styled as a kanban board
-        that takes over once photos arrive from{" "}
+        The other half of the pipeline: TARP Lab picks up jobs handed off from{" "}
         <a
           href="https://github.com/infinityp913/tarp-field"
           target="_blank"
@@ -102,15 +88,15 @@ const projects = [
           className="underline hover:text-neutral-300 transition-colors"
         >
           TARP Field
-        </a>
-        , driving jobs across five filesystem-backed pipeline stages (To Be
-        Processed → Uploaded to AIR) and each stratigraphic unit through its own
-        volumetrics pipeline (pre-snip → snip → post-snip → volume → SU sheet).
-        Every heavy step — Metashape alignment, Poisson mesh reconstruction with
-        CloudComPy, and georeferenced SU sheet PDF generation in QGIS — runs at
-        the click of a kanban card button, so no command-line or GIS expertise
-        is required on site. Syncs with Google Sheets so the Field and Lab
-        machines share one source of truth.
+        </a>{" "}
+        and turns them into finished 3D models and SU (stratigraphic unit)
+        research sheets, all from a kanban dashboard, no command line or GIS
+        experience required. Each job moves through 5 pipeline stages, and
+        each unit through its own volumetrics pipeline (align → mesh → volume
+        → SU sheet PDF). One click runs Metashape alignment, Poisson mesh
+        reconstruction (CloudComPy), or georeferenced PDF generation (QGIS).
+        Synced with Google Sheets so the Field and Lab machines share one
+        source of truth.
       </>
     ),
     tech: [
@@ -182,7 +168,7 @@ const projects = [
     title: "Street Image Stitcher",
     year: 2026,
     description:
-      "Built for urban planners, to automate a step in building inception reports: a web app that stitches Google Street View screenshots into a full-width street elevation panorama. Ideated out of conversations with urban planners in Mumbai and Boston. Iteratively worked through 14 stitching approaches — from Gemini-based seam blending (abandoned: hard output resolution cap at ~2048px) to a pure PIL pipeline with median luminance normalization and 400px sigmoid cross-fade blends. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend, and Vercel Blob for storage.",
+      "A web app that stitches Google Street View screenshots into a full-width street elevation panorama, automating a manual step in urban planners' building inception reports. Idea came from conversations with urban planners in Mumbai and Boston. Tried 14 stitching approaches before landing on a PIL pipeline with luminance normalization and sigmoid cross-fade blending. Next.js frontend with drag-to-reorder image sequencing, FastAPI backend.",
     tech: ["Next.js", "FastAPI", "Python", "PIL", "NumPy", "Vercel Blob"],
     link: "https://github.com/infinityp913/street-image-stitcher",
     image: {
@@ -206,12 +192,12 @@ const projects = [
         >
           I-JEPA
         </a>{" "}
-        (Assran et al., Meta AI 2023). ViT backbone with a context encoder, EMA
-        target encoder, and a predictor that learns in representation space — no
-        contrastive loss or pixel reconstruction. Reduced training time by
-        parallelizing target and prediction embedding generation and using mixed
-        precision training. Currently exploring RoPE embeddings and the Muon
-        optimizer for further efficiency gains.
+        (Assran et al., Meta AI 2023), a self-supervised vision model that
+        learns by predicting in representation space instead of reconstructing
+        pixels. ViT backbone with a context encoder, EMA target encoder, and a
+        predictor. Cut training time by parallelizing embedding generation and
+        using mixed precision. Currently exploring RoPE embeddings and the
+        Muon optimizer for further speedups.
       </>
     ),
     tech: ["PyTorch", "Python", "ViT", "Self-Supervised Learning"],
@@ -222,16 +208,14 @@ const projects = [
     year: 2026,
     description: (
       <>
-        A browser extension that fills job and accelerator applications using
-        your profile and Claude AI. Bring you own Claude API Key, add your
-        profile once, fill any form in seconds. Detects text inputs, textareas,
-        selects, contenteditable, shadow DOM, and cross-origin iframes across
-        two modes: Job (personal profile) and Accelerator (personal + startup
-        profile). The content script scans every frame for fillable fields,
-        infers labels and character limits, and returns them to the background
-        script. The background sends each field to Claude with your profile as
-        context, then writes answers back using native input setters so React,
-        Vue, and other frameworks register changes correctly.
+        A browser extension that autofills job and accelerator applications
+        using your profile and your own Claude API key. Add your profile
+        once, fill any form in seconds, in Job mode (personal profile) or
+        Accelerator mode (personal + startup profile). It scans every frame
+        for fillable fields, including shadow DOM and cross-origin iframes,
+        sends them to Claude with your profile as context, and writes the
+        answers back using native input setters so React, Vue, and other
+        frameworks register the change.
       </>
     ),
     tech: [

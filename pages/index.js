@@ -39,11 +39,43 @@ export default function Home() {
             >
               Ananth Preetham
             </h1>
-            <div className="text-md mt-8 sm:max-w-[460px] space-y-3">
-              <p className="mb-8">Founder, ML engineer, professional rabbit-holer.</p>
-              <p>Built an AI voice agent for F1 visa interview prep that grew to <span>7,000 users</span>. Knew it had legs the day our checkout broke and students started swiping every card in their wallet rather than give up.</p>
-              <p>Spent two summers digging at a Roman-Carthaginian site in Sardinia, then automated the boring part: pipelines that turn a dig site into <span>3D models of stratigraphic units</span>.</p>
-              <p>Off the clock: chasing redwoods and sequoias, 1-2 day backpacking trips wherever the flight is cheapest, keeping a running list of local foods to try everywhere I go, and being insufferably picky about movies and TV (3.7 on Letterboxd, 8.0 on IMDb, no exceptions).</p>
+            <div className="text-md mt-8 sm:max-w-[460px] space-y-4">
+              <p className="mb-8 text-neutral-200">
+                Founder, ML engineer, professional rabbit-holer.
+              </p>
+              <p className="text-neutral-400">
+                Currently building{" "}
+                <a
+                  href="https://learnpomelo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pomelo
+                </a>
+                , a platform to learn anything.
+              </p>
+              <p className="text-neutral-400">
+                Built an AI voice agent for F1 visa interview prep that grew to{" "}
+                <span className="text-neutral-200 font-medium">
+                  7,000 users
+                </span>
+                . Knew it had legs the day checkout broke and students swiped
+                every card in their wallet rather than give up.
+              </p>
+              <p className="text-neutral-400">
+                Spent two summers digging at a Roman-Carthaginian site in
+                Sardinia, then automated the boring part: pipelines that turn
+                dig photos into{" "}
+                <span className="text-neutral-200 font-medium">
+                  3D models of stratigraphic units
+                </span>
+                .
+              </p>
+              <p className="pt-2 text-neutral-500 text-sm">
+                Outside of that: hiking, national parks, cheap-flight
+                backpacking trips, a running list of local foods to try, and
+                being picky about movies and TV (3.7+ Letterboxd, 7.5+ IMDb).
+              </p>
               <div className="mt-6">
                 <Image
                   alt="Ananth holding a tray of grilled short ribs at a street food festival"
