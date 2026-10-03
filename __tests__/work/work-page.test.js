@@ -69,3 +69,23 @@ describe('WorkPage — heading font', () => {
     expect(h1.className).toContain(libreBaskerville.className);
   });
 });
+
+describe('WorkPage — ventures', () => {
+  it('lists Pomelo as a current co-founder role', () => {
+    render(<WorkPage />);
+    expect(screen.getByRole('heading', { level: 2, name: /^pomelo$/i })).toBeInTheDocument();
+    expect(screen.getByText(/co-founder, feb 2026 — present/i)).toBeInTheDocument();
+  });
+
+  it('splits Matherium into its three ventures', () => {
+    render(<WorkPage />);
+    const matherium = screen
+      .getAllByRole('heading', { level: 2 })
+      .filter((h) => /^matherium —/i.test(h.textContent));
+    expect(matherium.map((h) => h.textContent)).toEqual([
+      'Matherium — AI Voice Agents for F1 Visa Interview Prep',
+      'Matherium — AI Voice Agents for Customer Service',
+      'Matherium — Interactive AI Video Avatars for Customer Service',
+    ]);
+  });
+});
