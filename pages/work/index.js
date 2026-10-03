@@ -29,27 +29,45 @@ export default function WorkPage() {
               Entrepreneur, ML and Software Engineer.
             </p>
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Stealth
+              Pomelo
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-founder, Feb 2026 — Present
+              Co-Founder, Feb 2026 — Present
             </p>
+            <ul className="leading-relaxed list-disc">
+              <li>Co-founding Pomelo, an AI app for learning.</li>
+            </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Matherium
+              Matherium — AI Voice Agents for F1 Visa Interview Prep
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, May 2025 — Feb 2026
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
-                Built an AI mock F1 visa interviewer using voice AI for
-                prospective international students coming to the US.
+                Built an{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://matherium.org"
+                >
+                  AI mock F1 visa interviewer
+                </a>{" "}
+                using voice AI for prospective international students coming to
+                the US.
               </li>
-              <li>1000+ users and 4000+ interview calls made.</li>
               <li>
-                When we built AI voice agents for F1 mock interviews, our
-                payments were broken for people in India and students would try
+                Bootstrapped and profitable: 7,000+ users and 7,000+ mock
+                interviews, with students practicing 3–5 times a day.
+              </li>
+              <li>
+                Real-time voice pipeline: Whisper (STT), Mistral-7B + Haystack
+                prompted as a consular officer, and a custom TTS layer with Vosk
+                for ASR.
+              </li>
+              <li>
+                Payments were broken for people in India and students would try
                 paying with multiple cards (from their parents) to pay for our
                 tool — we knew we had product market fit then.
               </li>
@@ -107,7 +125,7 @@ export default function WorkPage() {
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              AI Voice Agents for Customer Service
+              Matherium — AI Voice Agents for Customer Service
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, Jan 2023 — May 2024
@@ -118,10 +136,15 @@ export default function WorkPage() {
                 to orchestrate MediaStreams between Whisper (STT), Vosk (ASR),
                 TransformerTTS (TTS), Haystack and a basic Language Model.
               </li>
+              <li>
+                Integrated GPT and tuned Whisper.cpp, cutting response time by
+                25%.
+              </li>
+              <li>Built a Shopify plugin for the voice agent.</li>
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Interactive AI Avatars for Customer Service
+              Matherium — Interactive AI Video Avatars for Customer Service
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
               Co-Founder, Feb 2022 — Jan 2023
@@ -132,6 +155,11 @@ export default function WorkPage() {
                 design and train the Deepfake GAN model for AI avatars. Created
                 an early MVP to demonstrate the idea to customers.
               </li>
+              <li>
+                Built a custom liquid-cooled GPU server to train our TTS and
+                voice-to-face models on our own compute.
+              </li>
+              <li>Pivoted to voice-only agents based on user feedback.</li>
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
