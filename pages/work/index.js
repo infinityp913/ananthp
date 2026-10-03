@@ -32,17 +32,27 @@ export default function WorkPage() {
               Pomelo
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-Founder, Feb 2026 — Present
+              Co-Founder, Feb 2026 - Present
             </p>
             <ul className="leading-relaxed list-disc">
-              <li>Co-founding Pomelo, an AI app for learning.</li>
+              <li>
+                Co-founding{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://learnpomelo.com"
+                >
+                  Pomelo
+                </a>
+                , an AI app for learning.
+              </li>
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Matherium — AI Voice Agents for F1 Visa Interview Prep
+              Matherium: AI Voice Agents for F1 Visa Interview Prep
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-Founder, May 2025 — Feb 2026
+              Co-Founder, May 2024 - Jun 2025
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -69,7 +79,7 @@ export default function WorkPage() {
               <li>
                 Payments were broken for people in India and students would try
                 paying with multiple cards (from their parents) to pay for our
-                tool — we knew we had product market fit then.
+                tool. That&apos;s when we knew we had product market fit.
               </li>
               <li>
                 Set up networking and databases. Trained neural networks and ran
@@ -80,7 +90,7 @@ export default function WorkPage() {
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
             <p className="my-6 text-neutral-400 text-sm">
-              ML Engineer, Oct 2024 — Present
+              ML Engineer, Oct 2024 - Present
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -125,10 +135,10 @@ export default function WorkPage() {
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Matherium — AI Voice Agents for Customer Service
+              Matherium: AI Voice Agents for Customer Service
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-Founder, Jan 2023 — May 2024
+              Co-Founder, Jan 2023 - May 2024
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -144,10 +154,10 @@ export default function WorkPage() {
             </ul>
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              Matherium — Interactive AI Video Avatars for Customer Service
+              Matherium: Interactive AI Video Avatars for Customer Service
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-Founder, Feb 2022 — Jan 2023
+              Co-Founder, Feb 2022 - Jan 2023
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -166,7 +176,7 @@ export default function WorkPage() {
               Pompeii Artistic Landscape Project
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Lead Software Engineer, Sep 2021 — Oct 2022
+              Lead Software Engineer, Sep 2021 - Oct 2022
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -197,7 +207,7 @@ export default function WorkPage() {
             <hr className="my-6 border-neutral-800" />
             <h2 className="font-medium text-xl mb-1 tracking-tighter">Nike</h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Machine Learning Engineer, Jun 2021 — Aug 2021
+              Machine Learning Engineer, Jun 2021 - Aug 2021
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -228,7 +238,7 @@ export default function WorkPage() {
               Fidelity Investments
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Software Engineer (FUll Stack), Jun 2020 — Aug 2020
+              Software Engineer (FUll Stack), Jun 2020 - Aug 2020
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -267,7 +277,7 @@ export default function WorkPage() {
               Matherium VR
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Co-founder and Software Engineer, Sep 2019 — May 2021
+              Co-founder and Software Engineer, Sep 2019 - May 2021
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -289,7 +299,7 @@ export default function WorkPage() {
               Computer Science @ University of Massachusetts Amherst
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              Teaching Assistant, Jan 2020 — May 2020
+              Teaching Assistant, Jan 2020 - May 2020
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
@@ -304,13 +314,13 @@ export default function WorkPage() {
               Pompeii Artistic Landscape Project
             </h2>
             <p className="my-6 text-neutral-400 text-sm">
-              NLP Research Assistant, Feb 2019 — Sep 2021
+              NLP Research Assistant, Feb 2019 - Sep 2021
             </p>
             <ul className="leading-relaxed list-disc">
               <li>
                 Developed NLP algorithms to extract from unstructured data to
                 contribute to a database for the digital mapping of Pompeii for
-                a $250M Getty-funded Project —{" "}
+                a $250M Getty-funded project, the{" "}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"

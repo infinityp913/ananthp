@@ -13,7 +13,7 @@ const libreBaskerville = Libre_Baskerville({
   style: ['normal', 'italic'],
 });
 
-describe('WorkPage — mobile padding', () => {
+describe('WorkPage: mobile padding', () => {
   it('section has px-6 class for mobile base padding', () => {
     const { container } = render(<WorkPage />);
     const section = container.querySelector('section');
@@ -28,7 +28,7 @@ describe('WorkPage — mobile padding', () => {
   });
 });
 
-describe('WorkPage — memoji removed', () => {
+describe('WorkPage: memoji removed', () => {
   it('memoji image is not rendered on work page', () => {
     render(<WorkPage />);
     const memoji = screen.queryByAltText('Ananth Preetham');
@@ -36,7 +36,7 @@ describe('WorkPage — memoji removed', () => {
   });
 });
 
-describe('WorkPage — active nav state', () => {
+describe('WorkPage: active nav state', () => {
   it('work nav link has text-neutral-200 when pathname is /work', () => {
     render(<WorkPage />);
     const workLink = screen.getByRole('link', { name: /^work$/i });
@@ -56,7 +56,7 @@ describe('WorkPage — active nav state', () => {
   });
 });
 
-describe('WorkPage — heading font', () => {
+describe('WorkPage: heading font', () => {
   it('Work page h1 className does not contain [object Object]', () => {
     render(<WorkPage />);
     const h1 = screen.getByRole('heading', { level: 1 });
@@ -70,22 +70,37 @@ describe('WorkPage — heading font', () => {
   });
 });
 
-describe('WorkPage — ventures', () => {
+describe('WorkPage: ventures', () => {
   it('lists Pomelo as a current co-founder role', () => {
     render(<WorkPage />);
     expect(screen.getByRole('heading', { level: 2, name: /^pomelo$/i })).toBeInTheDocument();
-    expect(screen.getByText(/co-founder, feb 2026 — present/i)).toBeInTheDocument();
+    expect(screen.getByText(/co-founder, feb 2026 - present/i)).toBeInTheDocument();
+  });
+
+  it('links Pomelo to learnpomelo.com in a new tab', () => {
+    render(<WorkPage />);
+    const link = screen.getByRole('link', { name: /^pomelo$/i });
+    expect(link).toHaveAttribute('href', 'https://learnpomelo.com');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('splits Matherium into its three ventures', () => {
     render(<WorkPage />);
     const matherium = screen
       .getAllByRole('heading', { level: 2 })
-      .filter((h) => /^matherium —/i.test(h.textContent));
+      .filter((h) => /^matherium:/i.test(h.textContent));
     expect(matherium.map((h) => h.textContent)).toEqual([
-      'Matherium — AI Voice Agents for F1 Visa Interview Prep',
-      'Matherium — AI Voice Agents for Customer Service',
-      'Matherium — Interactive AI Video Avatars for Customer Service',
+      'Matherium: AI Voice Agents for F1 Visa Interview Prep',
+      'Matherium: AI Voice Agents for Customer Service',
+      'Matherium: Interactive AI Video Avatars for Customer Service',
     ]);
+  });
+});
+
+describe('WorkPage: copy style', () => {
+  it('contains no em dashes', () => {
+    const { container } = render(<WorkPage />);
+    expect(container.textContent).not.toContain('\u2014');
   });
 });
