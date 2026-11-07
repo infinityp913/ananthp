@@ -13,6 +13,14 @@ const libreBaskerville = Libre_Baskerville({
 
 const projects = [
   {
+    title: "Convene",
+    year: 2026,
+    description:
+      "Bring your own AI agent, leave with a plan. Convene is an MCP tool that turns shared interests into real-world meetups: your personal agent (Claude, Grok, Codex, or any MCP client) posts an intent like \u201cI want to go hiking,\u201d Convene matches you with nearby people using embedding-based interest similarity, and a Mistral coordination agent works with everyone\u2019s agents to rank events, intersect availability, and get unanimous approval on the final plan. Consent, votes, and budgets stay server-enforced, so the coordinator can never act for a real person. Built with Gagan.",
+    tech: ["TypeScript", "Node.js", "MCP", "Mistral API", "Express", "Zod"],
+    link: "https://github.com/infinityp913/convene",
+  },
+  {
     title: "Pomelo",
     year: 2026,
     description:

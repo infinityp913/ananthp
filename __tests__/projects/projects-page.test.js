@@ -293,3 +293,15 @@ describe('ProjectsPage — TARP pipeline visualization', () => {
     expect(within(tarpCard).queryAllByRole('img')).toHaveLength(0);
   });
 });
+
+describe('ProjectsPage — Convene', () => {
+  it('renders Convene in 2026 with a GitHub link', () => {
+    render(<ProjectsPage />);
+    const card = screen.getByText('Convene').closest('.project-card');
+    const link = within(card).getByText('GitHub ↗︎');
+    expect(link).toHaveAttribute('href', 'https://github.com/infinityp913/convene');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(within(card).getByText('Mistral API')).toBeInTheDocument();
+  });
+});
