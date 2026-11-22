@@ -46,3 +46,77 @@ a:not(footer a){
     transform: translateY(0);
   }
 }
+
+/* Notes: rendered Markdown from the Obsidian vault */
+.note-content {
+  @apply text-neutral-300 leading-relaxed;
+}
+.note-content > * + * {
+  @apply mt-5;
+}
+.note-content h2 {
+  @apply text-lg font-medium text-neutral-100 tracking-tight mt-10 scroll-mt-24;
+}
+.note-content h3,
+.note-content h4 {
+  @apply text-base font-medium text-neutral-200 mt-8 scroll-mt-24;
+}
+.note-content h1 {
+  @apply text-xl font-medium text-neutral-100 mt-10;
+}
+.note-content ul {
+  @apply list-disc pl-5 space-y-1.5;
+}
+.note-content ol {
+  @apply list-decimal pl-5 space-y-1.5;
+}
+.note-content a {
+  @apply underline decoration-neutral-700 underline-offset-2 transition-colors;
+}
+.note-content a:hover {
+  @apply text-neutral-200 decoration-neutral-400;
+}
+.note-content a.wikilink {
+  @apply text-neutral-200 decoration-dotted;
+}
+.note-content .wikilink-missing {
+  @apply text-neutral-500 border-b border-dashed border-neutral-700 cursor-help;
+}
+.note-content blockquote {
+  @apply border-l border-neutral-700 pl-4 text-neutral-400 italic;
+}
+.note-content code {
+  @apply rounded bg-neutral-800/70 px-1.5 py-0.5 text-[0.85em] text-neutral-200;
+}
+.note-content pre {
+  @apply overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 text-sm;
+}
+.note-content pre code {
+  @apply bg-transparent p-0;
+}
+.note-content img {
+  @apply rounded-xl border border-neutral-800 max-w-full h-auto;
+}
+.note-content hr {
+  @apply border-neutral-800 my-10;
+}
+.note-content table {
+  @apply w-full text-sm border-collapse;
+}
+.note-content th,
+.note-content td {
+  @apply border border-neutral-800 px-3 py-2 text-left;
+}
+.note-content .callout {
+  @apply not-italic rounded-xl border border-neutral-800 bg-neutral-900/50 px-5 py-4 text-neutral-300;
+}
+.note-content .callout > * + * {
+  @apply mt-2;
+}
+.note-content .callout-title {
+  @apply text-xs uppercase tracking-widest text-neutral-500;
+}
+.note-content .callout-warning .callout-title,
+.note-content .callout-caution .callout-title {
+  @apply text-amber-400;
+}

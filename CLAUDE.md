@@ -25,8 +25,9 @@ npm run test:watch   # Run Jest in watch mode
 
 **Key directories:**
 - `pages/` — Route pages (`_app.js`, `_document.js`, `index.js`, `work/index.js`, `projects/index.js`)
-- `components/` — Reusable components (currently only `Navbar.jsx`)
-- `lib/` — Utility functions (`groupByYear.js`)
+- `components/` — Reusable components (`Navbar.jsx`, `Card.jsx`, `StarRating.jsx`)
+- `notes/` — Obsidian vault; each `.md` file is a published note (see `docs/obsidian-notes.md`)
+- `lib/` — Utility functions (`groupByYear.js`, `notes.js`, `formatDate.js`)
 - `styles/globals.css` — Global Tailwind + custom CSS (dark-themed, `#0d1117` background)
 - `public/` — Static assets (`memoji.png`, `prof-pic.png`, favicons)
 - `__tests__/` — Jest + Testing Library unit tests (`home/`, `work/`, `projects/`)
@@ -38,7 +39,7 @@ npm run test:watch   # Run Jest in watch mode
 
 **Styling:** Tailwind CSS utility classes throughout. Dark mode is the only mode — the site uses a dark `#0d1117` background. No light mode toggle or `dark:` variant classes. Libre Baskerville is used for headings via `next/font/google`.
 
-**Content:** Page content (bio, work history, project data) lives directly in the page files — there is no CMS or data layer. Work history is in `pages/work/index.js`; bio/intro is in `pages/index.js`; project list is in `pages/projects/index.js`.
+**Content:** Page content (bio, work history, project data) lives directly in the page files — there is no CMS or data layer. Exception: notes are Markdown files in `notes/`, read at build time by `lib/notes.js` (server-only; client code imports `lib/formatDate.js`, never `lib/notes.js`). Work history is in `pages/work/index.js`; bio/intro is in `pages/index.js`; project list is in `pages/projects/index.js`.
 
 **Navbar:** The shared navigation lives in `components/Navbar.jsx` and is rendered globally via `pages/_app.js`. Active state is detected via `useRouter().pathname`.
 
@@ -46,6 +47,8 @@ npm run test:watch   # Run Jest in watch mode
 - `Home` → `/` (`pages/index.js`)
 - `Projects` → `/projects` (`pages/projects/index.js`)
 - `Work` → `/work` (`pages/work/index.js`)
+- `Notes` → `/notes` (`pages/notes/index.js`, `pages/notes/[slug].js`) — active on nested routes too
+- `Books` → `/books` (`pages/books/index.js`)
 
 ## Page Structure Convention
 
@@ -66,6 +69,8 @@ Every page follows this layout pattern:
 - Inactive nav: `text-neutral-500`
 - Subtle / metadata: `text-neutral-600`
 - Borders / dividers: `border-neutral-800`
+
+**Cards:** content blocks use `components/Card.jsx` (`rounded-xl border border-neutral-800 bg-neutral-900/40 p-5`; `interactive` adds hover state when the whole card is a link). Projects, Work, Books, Notes and home "Latest notes" all use this surface.
 
 **Typography:**
 - Body font: Inter (set in `globals.css`)
@@ -144,6 +149,7 @@ Active feature specs:
 - `specs/001-project-page/` — Projects timeline page (complete)
 - `specs/003-project-links-nav/` — Project links and nav (in progress)
 - `specs/004-design-polish/` — Design polish (in progress)
+- `specs/006-notes-and-cards/` — Notes section + card design (in review)
 
 ## Project Governance (from `.specify/memory/constitution.md`)
 

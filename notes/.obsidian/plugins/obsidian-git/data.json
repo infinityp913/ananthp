@@ -1,0 +1,15 @@
+{
+  "commitMessage": "notes: {{date}}",
+  "autoCommitMessage": "notes: auto backup {{date}}",
+  "commitDateFormat": "YYYY-MM-DD HH:mm",
+  "autoSaveInterval": 10,
+  "autoPushInterval": 0,
+  "autoPullInterval": 10,
+  "autoPullOnBoot": true,
+  "disablePush": false,
+  "pullBeforePush": true,
+  "syncMethod": "rebase",
+  "differentIntervalCommitAndPush": false,
+  "autoBackupAfterFileChange": true,
+  "showStatusBar": true
+}

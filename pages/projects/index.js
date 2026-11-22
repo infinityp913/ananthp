@@ -526,7 +526,7 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Projects */}
-                  <div className="space-y-8 sm:space-y-10">
+                  <div className="space-y-4">
                     {yearProjects.map((project) => {
                       const flatIdx = flatProjects.indexOf(project);
                       return (
@@ -534,13 +534,13 @@ export default function ProjectsPage() {
                           {/* Spacer matching year column width */}
                           <div className="w-12 sm:w-16 flex-shrink-0" />
                           {/* Dot on the spine */}
-                          <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-800 flex-shrink-0 z-10 relative -ml-[2.5px]" />
+                          <span className="mt-[27px] w-1.5 h-1.5 rounded-full bg-neutral-700 flex-shrink-0 z-10 relative -ml-[2.5px]" />
                           {/* Card */}
                           <div
                             ref={(el) => {
                               cardRefs.current[flatIdx] = el;
                             }}
-                            className="ml-4 sm:ml-6 flex-1 min-w-0 project-card"
+                            className="ml-4 sm:ml-6 flex-1 min-w-0 project-card rounded-xl border border-neutral-800 bg-neutral-900/40 p-5 transition-colors hover:border-neutral-700"
                           >
                             <div className="mb-1">
                               <span className="font-medium text-neutral-200">

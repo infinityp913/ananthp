@@ -3,6 +3,9 @@ import Head from "next/head";
 import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
+import { Card } from "@/components/Card";
+import { formatDate } from "@/lib/formatDate";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -10,7 +13,7 @@ const libreBaskerville = Libre_Baskerville({
   style: ["normal", "italic"],
 });
 
-export default function Home() {
+export default function Home({ latestNotes = [] }) {
   const [showVideo, setShowVideo] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
 
@@ -127,6 +130,45 @@ export default function Home() {
                 </svg>
               </a>
             </div>
+            {latestNotes.length > 0 && (
+              <div className="mt-10">
+                <div className="flex items-baseline justify-between mb-4">
+                  <h2 className="text-neutral-500 text-xs uppercase tracking-widest">
+                    Latest notes
+                  </h2>
+                  <Link
+                    href="/notes"
+                    className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                  >
+                    All notes →
+                  </Link>
+                </div>
+                <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {latestNotes.map((note) => (
+                    <li key={note.slug}>
+                      <Card
+                        as={Link}
+                        href={`/notes/${note.slug}`}
+                        interactive
+                        className="h-full"
+                      >
+                        <span className="block font-medium text-sm text-neutral-200">
+                          {note.title}
+                        </span>
+                        {note.date && (
+                          <time
+                            dateTime={note.date}
+                            className="block text-xs text-neutral-600 mt-1"
+                          >
+                            {formatDate(note.date)}
+                          </time>
+                        )}
+                      </Card>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
               <button
                 className="flex items-center gap-2 text-left hover:text-neutral-300 transition-colors"
@@ -234,4 +276,9 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const { getAllNotes, toSummary } = await import("@/lib/notes");
+  return { props: { latestNotes: getAllNotes().slice(0, 4).map(toSummary) } };
 }
