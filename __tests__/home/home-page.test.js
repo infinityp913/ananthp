@@ -43,6 +43,17 @@ describe('Home page — social icon touch targets', () => {
     const githubLink = screen.getByTitle('GitHub');
     expect(githubLink.className).toContain('min-w-[44px]');
   });
+
+  it('X icon links to the X profile in a new tab with a 44px target', () => {
+    render(<Home />);
+    const xLink = screen.getByTitle('X');
+    expect(xLink).toHaveAttribute('href', 'https://x.com/ananthp_');
+    expect(xLink).toHaveAttribute('target', '_blank');
+    expect(xLink).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(xLink).toHaveAttribute('aria-label', 'X');
+    expect(xLink.className).toContain('min-h-[44px]');
+    expect(xLink.className).toContain('min-w-[44px]');
+  });
 });
 
 describe('Home page — footer spacing', () => {
