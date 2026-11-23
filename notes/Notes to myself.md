@@ -1,6 +1,7 @@
 ---
 title: Notes to myself
-date: 2026-11-22
+date: 2024-03-05
+updated: 2024-06-30
 tags: [life]
 ---
 
