@@ -24,7 +24,7 @@ export default function Home({ latestNotes = [] }) {
   return (
     <>
       <Head>
-        <title>ananthp</title>
+        <title>{"Hi, I'm Ananth."}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -47,7 +47,7 @@ export default function Home({ latestNotes = [] }) {
             <h1
               className={`mt-3 font-semibold text-2xl sm:text-3xl text-white ${libreBaskerville.className}`}
             >
-              Ananth Preetham
+              Hi, I&apos;m Ananth.
             </h1>
             <p className="mt-2 text-lg text-neutral-300">
               I&apos;m a founder, builder and ML engineer.
@@ -105,37 +105,72 @@ export default function Home({ latestNotes = [] }) {
                 </a>
                 , a platform to learn anything.
               </p>
-              <p>
-                I spent my time in college and after building with my twin
-                brother,{" "}
-                <a
-                  href="https://sidpreetham.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Sid
-                </a>
-                . We built a VR headset for education, AI agents you video call
-                with (we called them Interactive Deepfakes or &quot;IDFs&quot;
-                in 2022, no wonder the name didn&apos;t stick), AI voice agents
-                for customer service, and then voice agents for F1 visa
-                interview prep that grew to{" "}
-                <strong className="text-neutral-100 font-medium">
-                  7,000 users
-                </strong>
-                . For the last one, we knew we built something people wanted
-                when checkout broke and students tried multiple cards rather
-                than give up.
-              </p>
-              <p>
-                I spent two summers digging at a Roman-Carthaginian site in
-                Sardinia, then automated the boring part: pipelines that turn
-                dig photos into{" "}
-                <strong className="text-neutral-100 font-medium">
-                  3D models of stratigraphic units
-                </strong>
-                .
-              </p>
+              <div>
+                <p>
+                  I&apos;ve been building stuff with my twin brother,{" "}
+                  <a
+                    href="https://sidpreetham.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sid
+                  </a>
+                  , since we were 11. We built:
+                </p>
+                <ul className="mt-3 list-disc pl-5 space-y-2 marker:text-neutral-600">
+                  <li>A math teaching website in high school</li>
+                  <li>A VR headset for education</li>
+                  <li>
+                    AI agents you video call with (we called them Interactive
+                    Deepfakes, or &quot;IDFs&quot;, in 2022; no wonder the name
+                    didn&apos;t stick)
+                  </li>
+                  <li>AI voice agents for customer service</li>
+                  <li>
+                    Voice agents for F1 visa interview prep (
+                    <a
+                      href="https://matherium.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Matherium
+                    </a>
+                    ) that grew to{" "}
+                    <strong className="text-neutral-100 font-medium">
+                      7,000 users
+                    </strong>
+                    . We knew we had built something people wanted when
+                    checkout broke and students tried multiple cards rather
+                    than give up.
+                  </li>
+                  <li>
+                    An end-to-end automated operating system for a Roman
+                    archaeology project (
+                    <a
+                      href="https://github.com/infinityp913/tarp-field"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      TARP Field
+                    </a>
+                    ,{" "}
+                    <a
+                      href="https://github.com/infinityp913/tarp-lab"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      TARP Lab
+                    </a>
+                    ). After two summers digging at a
+                    Roman-Carthaginian site in Sardinia, we automated the
+                    boring part: pipelines that turn dig photos into{" "}
+                    <strong className="text-neutral-100 font-medium">
+                      3D models of stratigraphic units
+                    </strong>
+                    .
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="flex items-center gap-1 mt-8 -ml-[12px] text-neutral-400">

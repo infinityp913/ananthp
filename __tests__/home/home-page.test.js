@@ -141,3 +141,26 @@ describe('Home page — perseverance video', () => {
     );
   });
 });
+
+describe('Home page — bio project links', () => {
+  it.each([
+    ['Matherium', 'https://matherium.org'],
+    ['TARP Field', 'https://github.com/infinityp913/tarp-field'],
+    ['TARP Lab', 'https://github.com/infinityp913/tarp-lab'],
+  ])('links %s to %s in a new tab', (name, href) => {
+    render(<Home />);
+    const link = screen.getByRole('link', { name });
+    expect(link).toHaveAttribute('href', href);
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+});
+
+describe('Home page — heading', () => {
+  it('h1 reads "Hi, I\'m Ananth."', () => {
+    render(<Home />);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      "Hi, I'm Ananth."
+    );
+  });
+});
