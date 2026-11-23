@@ -479,7 +479,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Head>
-        <title>Projects | ananthp</title>
+        <title>Projects | ananthpreetham</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"

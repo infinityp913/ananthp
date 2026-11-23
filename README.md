@@ -1,4 +1,4 @@
-# ananthp · Personal Website
+# ananthpreetham · Personal Website
 
 This is my personal website, built with Next.js and Tailwind CSS. It lives at
 [ananthp.vercel.app](https://ananthp.vercel.app).

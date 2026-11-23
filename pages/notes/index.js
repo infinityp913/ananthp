@@ -46,7 +46,7 @@ export default function NotesPage({ notes = [] }) {
   return (
     <>
       <Head>
-        <title>Notes | ananthp</title>
+        <title>Notes | ananthpreetham</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -64,8 +64,8 @@ export default function NotesPage({ notes = [] }) {
               Notes
             </h1>
             <p className="text-neutral-500 text-sm mb-8">
-              A garden of half-finished thoughts. Written in Obsidian, published
-              as I go.
+              Half-finished thoughts. Written in Obsidian, published
+              at once.
             </p>
 
             <input

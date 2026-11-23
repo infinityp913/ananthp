@@ -15,7 +15,7 @@ export default function NotePage({ note }) {
   return (
     <>
       <Head>
-        <title>{`${note.title} | ananthp`}</title>
+        <title>{`${note.title} | ananthpreetham`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {note.description && (
           <meta name="description" content={note.description} />

@@ -1,4 +1,4 @@
-# Design System — ananthp
+# Design System — ananthpreetham
 
 This document captures the implicit design system for this portfolio site. All UI decisions should align with these tokens and conventions.
 
