@@ -22,7 +22,7 @@ export default function WorkPage() {
           <div className="mt-[5rem] w-full">
             <Navbar></Navbar>
             <h1
-              className={`font-semibold text-2xl text-white mb-5 ${libreBaskerville.className}`}
+              className={`font-semibold text-2xl text-white mb-2 ${libreBaskerville.className}`}
             >
               My work
             </h1>

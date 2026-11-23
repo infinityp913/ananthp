@@ -74,7 +74,7 @@ export default function NotesPage({ notes = [] }) {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search notes"
               aria-label="Search notes"
-              className="w-full rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3 text-sm text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
+              className="w-full rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3 text-sm text-neutral-200 placeholder:text-neutral-500 focus:outline-none focus:border-neutral-600"
             />
 
             {tags.length > 0 && (
@@ -124,7 +124,7 @@ export default function NotesPage({ notes = [] }) {
                         {note.date && (
                           <time
                             dateTime={note.date}
-                            className="shrink-0 text-xs text-neutral-600"
+                            className="shrink-0 text-xs text-neutral-500"
                           >
                             {formatDate(note.date)}
                           </time>
@@ -135,7 +135,7 @@ export default function NotesPage({ notes = [] }) {
                           {note.description}
                         </p>
                       )}
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 text-xs text-neutral-600">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 text-xs text-neutral-500">
                         <span>{note.readingTime} min read</span>
                         {note.tags.map((t) => (
                           <span key={t}>#{t}</span>

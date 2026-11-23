@@ -119,7 +119,7 @@ describe('Home page — latest notes', () => {
   it('shows latest notes near the top, before the bio', () => {
     render(<Home latestNotes={latestNotes} />);
     const notesHeading = screen.getByText(/latest notes/i);
-    const bio = screen.getByText(/Founder, ML engineer/);
+    const bio = screen.getByText(/Currently building/);
     expect(
       notesHeading.compareDocumentPosition(bio) & Node.DOCUMENT_POSITION_FOLLOWING,
     ).toBeTruthy();
