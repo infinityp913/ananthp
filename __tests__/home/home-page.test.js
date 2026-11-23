@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Home from '@/pages/index';
 
 jest.mock('next/router', () => ({
@@ -116,8 +116,28 @@ describe('Home page — latest notes', () => {
     expect(screen.getByRole('link', { name: /all notes/i })).toHaveAttribute('href', '/notes');
   });
 
+  it('shows latest notes near the top, before the bio', () => {
+    render(<Home latestNotes={latestNotes} />);
+    const notesHeading = screen.getByText(/latest notes/i);
+    const bio = screen.getByText(/Founder, ML engineer/);
+    expect(
+      notesHeading.compareDocumentPosition(bio) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+  });
+
   it('hides the section when there are no notes', () => {
     render(<Home />);
     expect(screen.queryByText(/latest notes/i)).not.toBeInTheDocument();
+  });
+});
+
+describe('Home page — perseverance video', () => {
+  it('embeds the updated YouTube video', () => {
+    render(<Home />);
+    fireEvent.click(screen.getByRole('button', { name: /persevering when things get hard/i }));
+    expect(screen.getByTitle('Persevering when things get hard')).toHaveAttribute(
+      'src',
+      'https://www.youtube.com/embed/A_u9Hc0Yg1o',
+    );
   });
 });

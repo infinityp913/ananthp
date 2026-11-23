@@ -42,6 +42,45 @@ export default function Home({ latestNotes = [] }) {
             >
               Ananth Preetham
             </h1>
+            {latestNotes.length > 0 && (
+              <div className="mt-8">
+                <div className="flex items-baseline justify-between mb-4">
+                  <h2 className="text-neutral-500 text-xs uppercase tracking-widest">
+                    Latest notes
+                  </h2>
+                  <Link
+                    href="/notes"
+                    className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                  >
+                    All notes →
+                  </Link>
+                </div>
+                <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {latestNotes.map((note) => (
+                    <li key={note.slug}>
+                      <Card
+                        as={Link}
+                        href={`/notes/${note.slug}`}
+                        interactive
+                        className="h-full"
+                      >
+                        <span className="block font-medium text-sm text-neutral-200">
+                          {note.title}
+                        </span>
+                        {note.date && (
+                          <time
+                            dateTime={note.date}
+                            className="block text-xs text-neutral-600 mt-1"
+                          >
+                            {formatDate(note.date)}
+                          </time>
+                        )}
+                      </Card>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="text-md mt-8 sm:max-w-[460px] space-y-4">
               <p className="mb-8 text-neutral-200">
                 Founder, ML engineer, professional rabbit-holer.
@@ -148,45 +187,6 @@ export default function Home({ latestNotes = [] }) {
                 </svg>
               </a>
             </div>
-            {latestNotes.length > 0 && (
-              <div className="mt-10">
-                <div className="flex items-baseline justify-between mb-4">
-                  <h2 className="text-neutral-500 text-xs uppercase tracking-widest">
-                    Latest notes
-                  </h2>
-                  <Link
-                    href="/notes"
-                    className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
-                  >
-                    All notes →
-                  </Link>
-                </div>
-                <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {latestNotes.map((note) => (
-                    <li key={note.slug}>
-                      <Card
-                        as={Link}
-                        href={`/notes/${note.slug}`}
-                        interactive
-                        className="h-full"
-                      >
-                        <span className="block font-medium text-sm text-neutral-200">
-                          {note.title}
-                        </span>
-                        {note.date && (
-                          <time
-                            dateTime={note.date}
-                            className="block text-xs text-neutral-600 mt-1"
-                          >
-                            {formatDate(note.date)}
-                          </time>
-                        )}
-                      </Card>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
             <div className="my-5 sm:max-w-[460px] max-w-2xl text-neutral-200">
               <button
                 className="flex items-center gap-2 text-left hover:text-neutral-300 transition-colors"
@@ -202,7 +202,7 @@ export default function Home({ latestNotes = [] }) {
               {showVideo && (
                 <div className="mt-3">
                   <iframe
-                    src="https://www.youtube.com/embed/k6C8SX0mWP0"
+                    src="https://www.youtube.com/embed/A_u9Hc0Yg1o"
                     title="Persevering when things get hard"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
