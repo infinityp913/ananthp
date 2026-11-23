@@ -50,7 +50,7 @@ export default function Home({ latestNotes = [] }) {
               Ananth Preetham
             </h1>
             <p className="mt-2 text-lg text-neutral-300">
-              Founder, ML engineer, professional rabbit-holer.
+              I&apos;m a founder, builder and ML engineer.
             </p>
 
             {latestNotes.length > 0 && (
@@ -106,26 +106,35 @@ export default function Home({ latestNotes = [] }) {
                 , a platform to learn anything.
               </p>
               <p>
-                Built an AI voice agent for F1 visa interview prep that grew to{" "}
+                I spent my time in college and after building with my twin
+                brother,{" "}
+                <a
+                  href="https://sidpreetham.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sid
+                </a>
+                . We built a VR headset for education, AI agents you video call
+                with (we called them Interactive Deepfakes or &quot;IDFs&quot;
+                in 2022, no wonder the name didn&apos;t stick), AI voice agents
+                for customer service, and then voice agents for F1 visa
+                interview prep that grew to{" "}
                 <strong className="text-neutral-100 font-medium">
                   7,000 users
                 </strong>
-                . Knew it had legs the day checkout broke and students swiped
-                every card in their wallet rather than give up.
+                . For the last one, we knew we built something people wanted
+                when checkout broke and students tried multiple cards rather
+                than give up.
               </p>
               <p>
-                Spent two summers digging at a Roman-Carthaginian site in
+                I spent two summers digging at a Roman-Carthaginian site in
                 Sardinia, then automated the boring part: pipelines that turn
                 dig photos into{" "}
                 <strong className="text-neutral-100 font-medium">
                   3D models of stratigraphic units
                 </strong>
                 .
-              </p>
-              <p className="text-neutral-400">
-                Outside of that: hiking, national parks, cheap-flight
-                backpacking trips, a running list of local foods to try, and
-                being picky about movies and TV (3.7+ Letterboxd, 7.5+ IMDb).
               </p>
             </div>
 
