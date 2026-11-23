@@ -45,9 +45,9 @@ npm run test:watch   # Run Jest in watch mode
 
 **Navbar items and destinations:**
 - `Home` → `/` (`pages/index.js`)
+- `Notes` → `/notes` (`pages/notes/index.js`, `pages/notes/[slug].js`) — active on nested routes too
 - `Projects` → `/projects` (`pages/projects/index.js`)
 - `Work` → `/work` (`pages/work/index.js`)
-- `Notes` → `/notes` (`pages/notes/index.js`, `pages/notes/[slug].js`) — active on nested routes too
 - `Books` → `/books` (`pages/books/index.js`)
 
 ## Page Structure Convention

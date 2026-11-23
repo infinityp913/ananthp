@@ -10,8 +10,12 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 const currentlyReading = [
+  { title: "The Hard Thing About Hard Things", author: "Ben Horowitz" },
+  { title: "I Don't Want to Talk About It", author: "Terrence Real" },
+];
+
+const onTheShelf = [
   { title: "Ingenuity Gap", author: "Thomas Homer-Dixon" },
-  { title: "Consider Phlebas", author: "Iain M. Banks" },
 ];
 
 const books = [
@@ -54,11 +58,48 @@ const books = [
   { title: "Five Little Pigs", author: "Agatha Christie", rating: 4 },
 ];
 
+function BookSection({ id, label, books, showRating = false, className = "" }) {
+  return (
+    <>
+      <h2
+        id={id}
+        className="text-neutral-400 text-xs uppercase tracking-widest mb-4"
+      >
+        {label}
+      </h2>
+      <ul
+        aria-labelledby={id}
+        className={`list-none grid grid-cols-1 sm:grid-cols-2 gap-3 ${className}`}
+      >
+        {books.map((book) => (
+          <li
+            key={book.title}
+            className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3"
+          >
+            {showRating && <StarRating rating={book.rating} />}
+            <div className="min-w-0">
+              <a
+                href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-neutral-200 text-sm hover:text-white hover:underline underline-offset-2 transition-colors block -my-2 py-2"
+              >
+                {book.title}
+              </a>
+              <p className="text-neutral-500 text-xs mt-0.5">{book.author}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
 export default function BooksPage() {
   return (
     <>
       <Head>
-        <title>Books | ananthp</title>
+        <title>Books | ananthpreetham</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -79,58 +120,19 @@ export default function BooksPage() {
               What I&apos;ve been reading.
             </p>
 
-            <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
-              Currently reading
-            </p>
-            <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3 mb-16">
-              {currentlyReading.map((book) => (
-                <li
-                  key={book.title}
-                  className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3"
-                >
-                  <div className="min-w-0">
-                    <a
-                      href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-neutral-200 text-sm hover:text-white hover:underline underline-offset-2 transition-colors block -my-2 py-2"
-                    >
-                      {book.title}
-                    </a>
-                    <p className="text-neutral-500 text-xs mt-0.5">
-                      {book.author}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
-              Read
-            </p>
-            <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {books.map((book) => (
-                <li
-                  key={book.title}
-                  className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3"
-                >
-                  <StarRating rating={book.rating} />
-                  <div className="min-w-0">
-                    <a
-                      href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-neutral-200 text-sm hover:text-white hover:underline underline-offset-2 transition-colors block -my-2 py-2"
-                    >
-                      {book.title}
-                    </a>
-                    <p className="text-neutral-500 text-xs mt-0.5">
-                      {book.author}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <BookSection
+              id="currently-reading"
+              label="Currently reading"
+              books={currentlyReading}
+              className="mb-16"
+            />
+            <BookSection
+              id="on-the-shelf"
+              label="On the shelf, yet to read"
+              books={onTheShelf}
+              className="mb-16"
+            />
+            <BookSection id="read" label="Read" books={books} showRating />
           </div>
         </div>
       </section>
