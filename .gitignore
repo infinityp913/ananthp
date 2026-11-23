@@ -7,3 +7,7 @@ coverage/
 Thumbs.db
 .claude/settings.local.json
 .gstack/
+public/note-assets/
+notes/.obsidian/workspace*.json
+notes/.obsidian/cache
+notes/.trash/

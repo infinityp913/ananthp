@@ -82,9 +82,12 @@ export default function BooksPage() {
             <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
               Currently reading
             </p>
-            <ul className="list-none space-y-5 mb-16">
+            <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3 mb-16">
               {currentlyReading.map((book) => (
-                <li key={book.title} className="flex items-start gap-3">
+                <li
+                  key={book.title}
+                  className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3"
+                >
                   <div className="min-w-0">
                     <a
                       href={`https://www.google.com/search?q=${encodeURIComponent(book.title + " " + book.author)}`}
@@ -105,9 +108,12 @@ export default function BooksPage() {
             <p className="text-neutral-400 text-xs uppercase tracking-widest mb-4">
               Read
             </p>
-            <ul className="list-none space-y-5">
+            <ul className="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
               {books.map((book) => (
-                <li key={book.title} className="flex items-start gap-3">
+                <li
+                  key={book.title}
+                  className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-4 py-3"
+                >
                   <StarRating rating={book.rating} />
                   <div className="min-w-0">
                     <a

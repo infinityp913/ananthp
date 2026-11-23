@@ -89,3 +89,24 @@ describe('Home page — active nav state', () => {
     expect(workLink.className).not.toContain('text-neutral-200');
   });
 });
+
+describe('Home page — latest notes', () => {
+  const latestNotes = [
+    { slug: 'beta', title: 'Beta note', date: '2026-03-01', tags: [], description: 'About ML.', readingTime: 2 },
+  ];
+
+  it('renders a card for each latest note', () => {
+    render(<Home latestNotes={latestNotes} />);
+    expect(screen.getByRole('link', { name: /beta note/i })).toHaveAttribute('href', '/notes/beta');
+  });
+
+  it('links to all notes', () => {
+    render(<Home latestNotes={latestNotes} />);
+    expect(screen.getByRole('link', { name: /all notes/i })).toHaveAttribute('href', '/notes');
+  });
+
+  it('hides the section when there are no notes', () => {
+    render(<Home />);
+    expect(screen.queryByText(/latest notes/i)).not.toBeInTheDocument();
+  });
+});

@@ -11,6 +11,9 @@ const navItems = {
   '/work': {
     name: 'work',
   },
+  '/notes': {
+    name: 'notes',
+  },
   '/books': {
     name: 'books',
   },
@@ -28,7 +31,10 @@ export function Navbar() {
         >
           <div className="flex flex-row space-x-0 pr-10">
             {Object.entries(navItems).map(([path, { name }]) => {
-              const isActive = router.pathname === path;
+              const isActive =
+                path === '/'
+                  ? router.pathname === '/'
+                  : router.pathname === path || router.pathname.startsWith(`${path}/`);
               return (
                 <Link
                   key={path}

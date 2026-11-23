@@ -73,7 +73,12 @@ Every page follows this structure:
 - `/` → home
 - `/projects` → projects
 - `/work` → work
+- `/notes` → notes
 - `/books` → books
+
+## Cards
+
+Shared surface: `components/Card.jsx` → `rounded-xl border border-neutral-800 bg-neutral-900/40 p-5`. Pass `interactive` (and `as={Link}`) when the whole card is clickable: adds `hover:border-neutral-700 hover:bg-neutral-900/80`. Lists of cards use `space-y-3`/`space-y-4` or `grid sm:grid-cols-2 gap-3`.
 
 ## Links
 
