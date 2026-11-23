@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import BooksPage from '@/pages/books/index';
 
 jest.mock('next/router', () => ({
@@ -31,14 +31,34 @@ describe('BooksPage — currently reading', () => {
     expect(screen.getByText(/currently reading/i)).toBeInTheDocument();
   });
 
-  it('"Ingenuity Gap" renders in currently reading without a star rating', () => {
+  it('lists the two current books with their authors', () => {
     render(<BooksPage />);
-    expect(screen.getByText('Ingenuity Gap')).toBeInTheDocument();
+    const list = screen.getByRole('list', { name: /currently reading/i });
+    const items = within(list).getAllByRole('listitem');
+    expect(items).toHaveLength(2);
+    expect(within(list).getByText('The Hard Thing About Hard Things')).toBeInTheDocument();
+    expect(within(list).getByText('Ben Horowitz')).toBeInTheDocument();
+    expect(within(list).getByText("I Don't Want to Talk About It")).toBeInTheDocument();
+    expect(within(list).getByText('Terrence Real')).toBeInTheDocument();
+  });
+});
+
+describe('BooksPage — on the shelf', () => {
+  it('lists Ingenuity Gap as yet to read', () => {
+    render(<BooksPage />);
+    const list = screen.getByRole('list', { name: /on the shelf, yet to read/i });
+    const items = within(list).getAllByRole('listitem');
+    expect(items).toHaveLength(1);
+    expect(within(list).getByText('Ingenuity Gap')).toBeInTheDocument();
+    expect(within(list).getByText('Thomas Homer-Dixon')).toBeInTheDocument();
   });
 
-  it('"Thomas Homer-Dixon" renders as author', () => {
+  it('sits between currently reading and read', () => {
     render(<BooksPage />);
-    expect(screen.getByText('Thomas Homer-Dixon')).toBeInTheDocument();
+    const labels = screen
+      .getAllByRole('heading', { level: 2 })
+      .map((h) => h.textContent.toLowerCase());
+    expect(labels).toEqual(['currently reading', 'on the shelf, yet to read', 'read']);
   });
 });
 
@@ -96,15 +116,18 @@ describe('BooksPage — navbar', () => {
     expect(homeLink.className).not.toContain('text-neutral-200');
   });
 
-  it('nav order: home < projects < work < books', () => {
+  it('nav order: home < notes < projects < work < books', () => {
     render(<BooksPage />);
     const navLinks = screen.getAllByRole('link');
     const texts = navLinks.map((l) => l.textContent.trim().toLowerCase());
     const homeIdx = texts.indexOf('home');
+    const notesIdx = texts.indexOf('notes');
     const projectsIdx = texts.indexOf('projects');
     const workIdx = texts.indexOf('work');
     const booksIdx = texts.indexOf('books');
-    expect(homeIdx).toBeLessThan(projectsIdx);
+    expect(homeIdx).toBe(0);
+    expect(notesIdx).toBe(1);
+    expect(notesIdx).toBeLessThan(projectsIdx);
     expect(projectsIdx).toBeLessThan(workIdx);
     expect(workIdx).toBeLessThan(booksIdx);
   });

@@ -1,4 +1,4 @@
-# Design System — ananthp
+# Design System — ananthpreetham
 
 This document captures the implicit design system for this portfolio site. All UI decisions should align with these tokens and conventions.
 
@@ -8,7 +8,9 @@ This document captures the implicit design system for this portfolio site. All U
 |------|-------|-----|
 | Page background | (global CSS) | `#0d1117` |
 | Primary text | `text-neutral-200` | `#e5e7eb` |
-| Secondary / muted text | `text-neutral-500` | `#6b7280` |
+| Body text (long prose) | `text-neutral-300` | `#d4d4d4` |
+| Secondary text | `text-neutral-400` | `#a3a3a3` |
+| Muted text / metadata | `text-neutral-500` | `#8a8a8a` (tuned in `tailwind.config.js`; 5.5:1) |
 | Decorative / disabled | `text-neutral-700` | `#374151` |
 | Borders (light) | `border-neutral-800` | `#1f2937` |
 | Star accent (only warm color) | `text-amber-400` | `#fbbf24` |
@@ -16,6 +18,10 @@ This document captures the implicit design system for this portfolio site. All U
 **Rules:**
 - Always-dark theme. No light mode. Do not add `dark:` variant classes.
 - No new accent colors without a clear reason. `amber-400` is the only warm color on the site.
+- Text must reach 4.5:1 on `#0d1117`. Never use `text-neutral-600` or darker for text; use `neutral-600`+ only for borders and decoration.
+- Inline prose links (an `<a>` with no class) are styled globally: `neutral-200`, 1px underline in `#525252`, 3px offset.
+- Disclosure toggles use `components/Chevron.jsx` (SVG), never Unicode glyphs like ▶ ▼.
+- Inter is loaded with `next/font` in `pages/_app.js`.
 
 ## Typography
 

@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Libre_Baskerville } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import { groupByYear } from "@/lib/groupByYear";
+import { Chevron } from "@/components/Chevron";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -478,7 +479,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Head>
-        <title>Projects | ananthp</title>
+        <title>Projects | ananthpreetham</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -519,7 +520,7 @@ export default function ProjectsPage() {
                 <div key={year} className="mb-10 sm:mb-14">
                   {/* Year marker */}
                   <div className="flex items-center mb-5 sm:mb-7">
-                    <span className="w-12 sm:w-16 flex-shrink-0 text-right pr-4 text-neutral-600 text-xs tracking-widest">
+                    <span className="w-12 sm:w-16 flex-shrink-0 text-right pr-4 text-neutral-500 text-xs tracking-widest">
                       {year}
                     </span>
                     <span className="w-2 h-2 rounded-full bg-neutral-700 flex-shrink-0 z-10 relative -ml-[3.5px]" />
@@ -564,7 +565,7 @@ export default function ProjectsPage() {
                               {project.tech.map((t) => (
                                 <span
                                   key={t}
-                                  className="text-xs text-neutral-600 border border-neutral-800 rounded px-1.5 py-0.5"
+                                  className="text-xs text-neutral-500 border border-neutral-800 rounded px-1.5 py-0.5"
                                 >
                                   {t}
                                 </span>
@@ -581,10 +582,10 @@ export default function ProjectsPage() {
                                       onClick={() => toggleImage(project.title)}
                                       aria-expanded={isOpen}
                                       aria-controls={imageId}
-                                      className="mt-3 text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                                      className="mt-2 -mb-2 inline-flex items-center gap-1.5 min-h-[44px] text-xs text-neutral-400 hover:text-neutral-100 transition-colors"
                                     >
-                                      {isOpen ? "Hide screenshot" : "Show screenshot"}{" "}
-                                      {isOpen ? "▲" : "▼"}
+                                      <Chevron open={isOpen} className="h-3 w-3" />
+                                      {isOpen ? "Hide screenshot" : "Show screenshot"}
                                     </button>
                                     {isOpen && (
                                       <div
@@ -615,17 +616,17 @@ export default function ProjectsPage() {
                                       onClick={() => toggleImage(project.title)}
                                       aria-expanded={isOpen}
                                       aria-controls={imageId}
-                                      className="mt-3 text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                                      className="mt-2 -mb-2 inline-flex items-center gap-1.5 min-h-[44px] text-xs text-neutral-400 hover:text-neutral-100 transition-colors"
                                     >
-                                      {isOpen ? "Hide pipeline" : "Show pipeline"}{" "}
-                                      {isOpen ? "▲" : "▼"}
+                                      <Chevron open={isOpen} className="h-3 w-3" />
+                                      {isOpen ? "Hide pipeline" : "Show pipeline"}
                                     </button>
                                     {isOpen && (
                                       <div
                                         id={imageId}
                                         className="mt-3 rounded border border-neutral-800 bg-neutral-900 p-3 project-image-reveal"
                                       >
-                                        <p className="text-[10px] tracking-widest text-neutral-600 uppercase mb-3">
+                                        <p className="text-[10px] tracking-widest text-neutral-500 uppercase mb-3">
                                           {project.pipeline.caption}
                                         </p>
                                         <div className="flex items-start gap-3 overflow-x-auto pb-1">

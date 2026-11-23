@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2.0] - 2026-11-22
+
+### Added
+- **"On the shelf, yet to read"** section on the Books page, between Currently reading and Read
+- **"Foundational models for Life"** note
+- **X profile link** in the home page social icons
+- **Bio links** to Sid, Matherium, TARP Field and TARP Lab
+
+### Changed
+- **Home page:** heading now reads "Hi, I'm Ananth."; the bio lists what Ananth and Sid have built as bullets, including the Roman archaeology project; latest notes moved to the top; perseverance video updated
+- **Design pass:** more readable home page, higher-contrast text, Inter loaded properly
+- **Navbar order:** Notes is now second (home, notes, projects, work, books)
+- **Currently reading:** The Hard Thing About Hard Things (Ben Horowitz) and I Don't Want to Talk About It (Terrence Real); Ingenuity Gap moved to the shelf
+- **Site name:** browser tab titles, README and package name now use "ananthpreetham"
+- **Notes page** subtitle shortened; "Notes to myself" dated from its original 2024 commits
+
+### Removed
+- Food festival photo and hobbies paragraph from the home page
+- Per-machine Obsidian settings (`appearance.json`, `core-plugins.json`) are now gitignored
+
 ## [0.0.1.0] - 2026-04-08
 
 ### Added

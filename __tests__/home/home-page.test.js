@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Home from '@/pages/index';
 
 jest.mock('next/router', () => ({
@@ -42,6 +42,17 @@ describe('Home page — social icon touch targets', () => {
     render(<Home />);
     const githubLink = screen.getByTitle('GitHub');
     expect(githubLink.className).toContain('min-w-[44px]');
+  });
+
+  it('X icon links to the X profile in a new tab with a 44px target', () => {
+    render(<Home />);
+    const xLink = screen.getByTitle('X');
+    expect(xLink).toHaveAttribute('href', 'https://x.com/ananthp_');
+    expect(xLink).toHaveAttribute('target', '_blank');
+    expect(xLink).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(xLink).toHaveAttribute('aria-label', 'X');
+    expect(xLink.className).toContain('min-h-[44px]');
+    expect(xLink.className).toContain('min-w-[44px]');
   });
 });
 
@@ -105,8 +116,51 @@ describe('Home page — latest notes', () => {
     expect(screen.getByRole('link', { name: /all notes/i })).toHaveAttribute('href', '/notes');
   });
 
+  it('shows latest notes near the top, before the bio', () => {
+    render(<Home latestNotes={latestNotes} />);
+    const notesHeading = screen.getByText(/latest notes/i);
+    const bio = screen.getByText(/Currently building/);
+    expect(
+      notesHeading.compareDocumentPosition(bio) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+  });
+
   it('hides the section when there are no notes', () => {
     render(<Home />);
     expect(screen.queryByText(/latest notes/i)).not.toBeInTheDocument();
+  });
+});
+
+describe('Home page — perseverance video', () => {
+  it('embeds the updated YouTube video', () => {
+    render(<Home />);
+    fireEvent.click(screen.getByRole('button', { name: /persevering when things get hard/i }));
+    expect(screen.getByTitle('Persevering when things get hard')).toHaveAttribute(
+      'src',
+      'https://www.youtube.com/embed/A_u9Hc0Yg1o',
+    );
+  });
+});
+
+describe('Home page — bio project links', () => {
+  it.each([
+    ['Matherium', 'https://matherium.org'],
+    ['TARP Field', 'https://github.com/infinityp913/tarp-field'],
+    ['TARP Lab', 'https://github.com/infinityp913/tarp-lab'],
+  ])('links %s to %s in a new tab', (name, href) => {
+    render(<Home />);
+    const link = screen.getByRole('link', { name });
+    expect(link).toHaveAttribute('href', href);
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+});
+
+describe('Home page — heading', () => {
+  it('h1 reads "Hi, I\'m Ananth."', () => {
+    render(<Home />);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      "Hi, I'm Ananth."
+    );
   });
 });

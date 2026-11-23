@@ -15,7 +15,7 @@ export default function NotePage({ note }) {
   return (
     <>
       <Head>
-        <title>{`${note.title} | ananthp`}</title>
+        <title>{`${note.title} | ananthpreetham`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {note.description && (
           <meta name="description" content={note.description} />
@@ -37,7 +37,7 @@ export default function NotePage({ note }) {
             >
               {note.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-600 mb-10">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-500 mb-10">
               {note.date && (
                 <time dateTime={note.date}>{formatDate(note.date)}</time>
               )}

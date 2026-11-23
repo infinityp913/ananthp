@@ -11,3 +11,5 @@ public/note-assets/
 notes/.obsidian/workspace*.json
 notes/.obsidian/cache
 notes/.trash/
+notes/.obsidian/appearance.json
+notes/.obsidian/core-plugins.json
