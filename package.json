@@ -1,6 +1,6 @@
 {
-  "name": "ananthp",
-  "version": "0.1.0",
+  "name": "ananthpreetham",
+  "version": "0.0.2.0",
   "private": true,
   "scripts": {
     "predev": "node scripts/copy-note-assets.js",
